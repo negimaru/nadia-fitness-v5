@@ -1,0 +1,429 @@
+{
+ "studio": {
+  "name": "Nadia Fitness Dance Studio",
+  "tagline": "Academia de baile y fitness en Torrox Costa",
+  "phone": "654 691 336",
+  "phoneIntl": "+34654691336",
+  "whatsapp": "34654691336",
+  "whatsappText": "¡Hola! Quiero información sobre las clases.",
+  "street": "Urb. Santa Rosa, Calle Margarita 6",
+  "postalCode": "29793",
+  "locality": "Torrox Costa",
+  "region": "Málaga",
+  "country": "ES",
+  "geo": {
+   "lat": 36.734952643097586,
+   "lng": -3.973681796403784
+  },
+  "mapsUrl": "https://maps.app.goo.gl/jp69zpacG6Zni4Du5",
+  "reviewsUrl": "https://www.google.com/maps/search/?api=1&query=Nadia%20Fitness%20Dance%20Studio%20Torrox",
+  "rating": {
+   "value": "5,0",
+   "count": 29
+  },
+  "instagram": "https://www.instagram.com/nadiafitnessdancestudio/",
+  "instagramHandle": "@nadiafitnessdancestudio",
+  "facebook": "https://www.facebook.com/profile.php?id=61571423443783",
+  "season": "2026/27",
+  "areaServed": [
+   "Torrox",
+   "Torrox Costa",
+   "Nerja",
+   "Algarrobo"
+  ],
+  "siteUrl": "https://negimaru.github.io/nadia-fitness-v5/"
+ },
+ "owner": {
+  "name": null,
+  "nif": null,
+  "email": null
+ },
+ "legalUpdated": "18 de noviembre de 2026",
+ "days": [
+  "Lunes",
+  "Martes",
+  "Miércoles",
+  "Jueves",
+  "Viernes"
+ ],
+ "callHours": [
+  {
+   "day": 0,
+   "from": "9:00",
+   "to": "16:00"
+  },
+  {
+   "day": 1,
+   "from": "11:00",
+   "to": "16:00"
+  },
+  {
+   "day": 2,
+   "from": "9:00",
+   "to": "16:00"
+  },
+  {
+   "day": 3,
+   "from": "13:00",
+   "to": "16:00"
+  },
+  {
+   "day": 4,
+   "from": "13:00",
+   "to": "16:00"
+  }
+ ],
+ "classes": [
+  {
+   "id": "dance-baby",
+   "name": "Grupo Dance Baby",
+   "type": "dance",
+   "kind": "Baile",
+   "audience": "Peques",
+   "summary": "Los más pequeños de la academia se inician en el baile jugando: ritmo, coordinación y sus primeras coreografías en grupo.",
+   "description": "Los más pequeños de la academia se inician en el baile jugando: ritmo, coordinación y sus primeras coreografías en grupo.",
+   "photo": "clases/dance-baby.webp",
+   "photoAlt": "",
+   "placeholder": true
+  },
+  {
+   "id": "dance-intermedio",
+   "name": "Grupo Dance Intermedio",
+   "type": "dance",
+   "kind": "Baile",
+   "audience": "Con base",
+   "summary": "Dos grupos, Intermedio 1 e Intermedio 2, para quien ya tiene base y quiere seguir progresando en técnica y coreografía.",
+   "description": "Dos grupos, Intermedio 1 e Intermedio 2, para quien ya tiene base y quiere seguir progresando en técnica y coreografía.",
+   "photo": "clases/dance-intermedio.webp",
+   "photoAlt": "",
+   "placeholder": true
+  },
+  {
+   "id": "dance-avanzado",
+   "name": "Grupo Dance Avanzado",
+   "type": "dance",
+   "kind": "Baile",
+   "audience": "Nivel avanzado",
+   "summary": "Coreografías más exigentes para quien ya domina la base y quiere ir un paso más allá.",
+   "description": "Coreografías más exigentes para quien ya domina la base y quiere ir un paso más allá.",
+   "photo": "clases/dance-avanzado.webp",
+   "photoAlt": "",
+   "placeholder": true
+  },
+  {
+   "id": "wedance-adultos",
+   "name": "WeDance Grupo Adulto",
+   "type": "dance",
+   "kind": "Baile",
+   "audience": "Adultos",
+   "summary": "Baile en grupo para adultos. Aprende coreografías, muévete y pásalo bien sin necesidad de experiencia previa.",
+   "description": "Baile en grupo para adultos. Aprende coreografías, muévete y pásalo bien sin necesidad de experiencia previa.",
+   "photo": "bailarina.webp",
+   "photoAlt": "Bailarina en plena coreografía",
+   "placeholder": false
+  },
+  {
+   "id": "fitdance",
+   "name": "Fitdance",
+   "type": "fit",
+   "kind": "Baile y fitness",
+   "audience": "Adultos",
+   "summary": "Clase dirigida que mezcla fitness y baile: cardio a ritmo de coreografía para sudar sin darte cuenta.",
+   "description": "Clase dirigida que mezcla fitness y baile: cardio a ritmo de coreografía para sudar sin darte cuenta.",
+   "photo": "monitora-fitdance.webp",
+   "photoAlt": "Nadia, monitora de Fitdance, con micrófono",
+   "placeholder": false
+  },
+  {
+   "id": "powerhiit",
+   "name": "PowerHIIT",
+   "type": "fit",
+   "kind": "Fitness",
+   "audience": "Adultos",
+   "summary": "Entrenamiento funcional de alta intensidad por intervalos. Tienes grupo de mañana y de tarde para encajarlo en tu semana.",
+   "description": "Entrenamiento funcional de alta intensidad por intervalos. Tienes grupo de mañana y de tarde para encajarlo en tu semana.",
+   "photo": "clases/powerhiit.webp",
+   "photoAlt": "",
+   "placeholder": true
+  },
+  {
+   "id": "aquafitness",
+   "name": "Aquafitness",
+   "type": "fit",
+   "kind": "Fitness en el agua",
+   "audience": "Adultos",
+   "summary": "Ejercicio en el agua, en piscina exterior: trabajo cardiovascular y de tono muscular con bajo impacto en las articulaciones.",
+   "description": "Ejercicio en el agua, en piscina exterior: trabajo cardiovascular y de tono muscular con bajo impacto en las articulaciones.",
+   "photo": "clases/aquafitness.webp",
+   "photoAlt": "",
+   "placeholder": true
+  }
+ ],
+ "sessions": [
+  {
+   "class": "powerhiit",
+   "day": 1,
+   "start": "9:30",
+   "end": "10:30",
+   "label": "",
+   "note": "Entrenamiento funcional"
+  },
+  {
+   "class": "powerhiit",
+   "day": 3,
+   "start": "9:30",
+   "end": "10:30",
+   "label": "",
+   "note": "Entrenamiento funcional"
+  },
+  {
+   "class": "powerhiit",
+   "day": 4,
+   "start": "9:30",
+   "end": "10:30",
+   "label": "",
+   "note": "Entrenamiento funcional"
+  },
+  {
+   "class": "aquafitness",
+   "day": 3,
+   "start": "12:00",
+   "end": "13:00",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "aquafitness",
+   "day": 4,
+   "start": "12:00",
+   "end": "13:00",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "dance-intermedio",
+   "day": 0,
+   "start": "16:30",
+   "end": "17:30",
+   "label": "Grupo Dance Intermedio 1",
+   "note": ""
+  },
+  {
+   "class": "dance-baby",
+   "day": 1,
+   "start": "16:30",
+   "end": "17:30",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "dance-intermedio",
+   "day": 2,
+   "start": "16:30",
+   "end": "17:30",
+   "label": "Grupo Dance Intermedio 1",
+   "note": ""
+  },
+  {
+   "class": "dance-baby",
+   "day": 3,
+   "start": "16:30",
+   "end": "17:30",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "dance-avanzado",
+   "day": 4,
+   "start": "16:30",
+   "end": "17:30",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "dance-intermedio",
+   "day": 0,
+   "start": "17:30",
+   "end": "18:30",
+   "label": "Grupo Dance Intermedio 2",
+   "note": ""
+  },
+  {
+   "class": "dance-avanzado",
+   "day": 1,
+   "start": "17:30",
+   "end": "18:30",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "dance-intermedio",
+   "day": 2,
+   "start": "17:30",
+   "end": "18:30",
+   "label": "Grupo Dance Intermedio 2",
+   "note": ""
+  },
+  {
+   "class": "wedance-adultos",
+   "day": 4,
+   "start": "17:30",
+   "end": "18:30",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "aquafitness",
+   "day": 0,
+   "start": "19:00",
+   "end": "20:00",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "powerhiit",
+   "day": 1,
+   "start": "19:30",
+   "end": "20:30",
+   "label": "",
+   "note": "Entrenamiento funcional"
+  },
+  {
+   "class": "aquafitness",
+   "day": 2,
+   "start": "19:00",
+   "end": "20:00",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "powerhiit",
+   "day": 3,
+   "start": "19:30",
+   "end": "20:30",
+   "label": "",
+   "note": "Entrenamiento funcional"
+  },
+  {
+   "class": "aquafitness",
+   "day": 0,
+   "start": "20:00",
+   "end": "21:00",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "fitdance",
+   "day": 1,
+   "start": "20:30",
+   "end": "21:30",
+   "label": "",
+   "note": "Clase dirigida"
+  },
+  {
+   "class": "aquafitness",
+   "day": 2,
+   "start": "20:00",
+   "end": "21:00",
+   "label": "",
+   "note": ""
+  },
+  {
+   "class": "fitdance",
+   "day": 3,
+   "start": "20:30",
+   "end": "21:30",
+   "label": "",
+   "note": "Clase dirigida"
+  }
+ ],
+ "legal": {
+  "aviso-legal": {
+   "title": "Aviso legal · Nadia Fitness Dance Studio",
+   "h1": "Aviso legal",
+   "lead": "Datos del titular de esta web y condiciones de uso.",
+   "body": "<h2>1. Datos identificativos</h2>\n<p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los datos del titular de esta web:</p>\n<ul>\n<li><b>Titular:</b> <mark class=\"ph-mark\">[Nombre completo de la titular o razón social]</mark></li>\n<li><b>Nombre comercial:</b> Nadia Fitness Dance Studio</li>\n<li><b>NIF:</b> <mark class=\"ph-mark\">[NIF / DNI]</mark></li>\n<li><b>Domicilio:</b> Urb. Santa Rosa, Calle Margarita 6, 29793 Torrox Costa (Málaga)</li>\n<li><b>Teléfono:</b> <a href=\"tel:+34654691336\">654 691 336</a></li>\n<li><b>Email:</b> <mark class=\"ph-mark\">[Email de contacto]</mark></li>\n<li><b>Actividad:</b> academia de baile y actividades de fitness.</li>\n</ul>\n<h2>2. Objeto</h2>\n<p>Esta web informa sobre las clases, horarios y formas de contacto de Nadia Fitness Dance Studio. Acceder a ella y navegar por sus páginas implica aceptar este aviso legal.</p>\n<h2>3. Condiciones de uso</h2>\n<p>La persona usuaria se compromete a hacer un uso adecuado de los contenidos de la web y a no emplearlos para actividades ilícitas o contrarias a la buena fe. Los horarios, tarifas y precios publicados son orientativos y pueden cambiar; la información vigente es la que se confirma por teléfono o en la academia.</p>\n<h2>4. Propiedad intelectual e industrial</h2>\n<p>El logotipo, el nombre comercial, las fotografías y los textos de esta web pertenecen a su titular o se usan con autorización. No está permitida su reproducción, distribución o modificación sin consentimiento expreso.</p>\n<h2>5. Enlaces a otras webs</h2>\n<p>La web incluye enlaces a servicios de terceros (WhatsApp, Instagram, Facebook y Google Maps). El titular no se hace responsable de sus contenidos ni de sus políticas, que se rigen por sus propias condiciones.</p>\n<h2>6. Responsabilidad</h2>\n<p>El titular procura que la información de la web sea correcta y esté actualizada, pero no garantiza la ausencia de errores ni la disponibilidad continua del sitio, y no responde de los daños derivados de su uso.</p>\n<h2>7. Protección de datos</h2>\n<p>El tratamiento de datos personales se explica en la <a href=\"../privacidad/\">política de privacidad</a>.</p>\n<h2>8. Legislación aplicable</h2>\n<p>Este aviso legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a la normativa vigente.</p>\n<p class=\"small\">Última actualización: 17 de noviembre de 2026.</p>"
+  },
+  "privacidad": {
+   "title": "Política de privacidad · Nadia Fitness Dance Studio",
+   "h1": "Política de privacidad",
+   "lead": "Cómo tratamos tus datos personales y qué cookies usa esta web.",
+   "body": "<h2>1. Responsable del tratamiento</h2>\n<ul>\n<li><b>Responsable:</b> <mark class=\"ph-mark\">[Nombre completo de la titular o razón social]</mark> (Nadia Fitness Dance Studio)</li>\n<li><b>NIF:</b> <mark class=\"ph-mark\">[NIF / DNI]</mark></li>\n<li><b>Dirección:</b> Urb. Santa Rosa, Calle Margarita 6, 29793 Torrox Costa (Málaga)</li>\n<li><b>Teléfono:</b> <a href=\"tel:+34654691336\">654 691 336</a></li>\n<li><b>Email:</b> <mark class=\"ph-mark\">[Email de contacto]</mark></li>\n</ul>\n<h2>2. Qué datos tratamos y de dónde vienen</h2>\n<p>Tratamos los datos que nos facilitas directamente al llamarnos, escribirnos por WhatsApp, por email o al inscribirte en la academia: nombre, teléfono, clase que te interesa y la información que quieras contarnos. En el caso de menores, los datos los facilita su madre, padre o tutor legal.</p>\n<p><b>El formulario de esta web no guarda ningún dato.</b> Al pulsar «Enviar por WhatsApp» solo se abre WhatsApp con tu mensaje ya escrito; eres tú quien decide enviarlo.</p>\n<h2>3. Para qué los usamos</h2>\n<ul>\n<li>Responder a tus consultas y darte información sobre clases, horarios y tarifas.</li>\n<li>Gestionar tu inscripción, la asistencia a las clases y los cobros.</li>\n<li>Avisarte de cambios de horario o de actividades de la academia.</li>\n</ul>\n<h2>4. Base legal</h2>\n<p>Tu consentimiento al contactarnos y, si te inscribes, la ejecución de la relación con la academia. Algunos datos se conservan además para cumplir obligaciones legales (por ejemplo, fiscales).</p>\n<h2>5. Cuánto tiempo los conservamos</h2>\n<p>Mientras dure tu relación con la academia y, después, el tiempo necesario para atender posibles responsabilidades legales. Los datos de consultas que no terminan en inscripción se borran cuando dejan de ser necesarios.</p>\n<h2>6. Con quién se comparten</h2>\n<p>No cedemos tus datos a terceros salvo obligación legal. Para funcionar, la web y la academia se apoyan en estos proveedores:</p>\n<ul>\n<li><b>WhatsApp (Meta):</b> si nos escribes por WhatsApp, se aplica también su política de privacidad.</li>\n<li><b>GitHub Pages (GitHub, Inc.):</b> aloja esta web y puede registrar datos técnicos de la visita, como la dirección IP, por motivos de seguridad.</li>\n</ul>\n<p>Algunos de estos proveedores pueden tratar datos fuera del Espacio Económico Europeo, con las garantías previstas en el Reglamento General de Protección de Datos.</p>\n<h2>7. Tus derechos</h2>\n<p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a <mark class=\"ph-mark\">[Email de contacto]</mark> o en la propia academia. Si consideras que no hemos atendido correctamente tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href=\"https://www.aepd.es\" rel=\"noopener\">www.aepd.es</a>).</p>\n<h2>8. Cookies</h2>\n<p>Esta web no usa cookies, ni propias ni de terceros, ni herramientas de analítica o publicidad. Las fuentes y el mapa se sirven desde la propia web, sin conectar con Google ni con otros servicios. Solo guarda en tu navegador tu preferencia de modo día o noche, que no sirve para identificarte.</p>\n<p>Los enlaces a WhatsApp, Instagram, Facebook o Google Maps te llevan a esos servicios, que aplican sus propias políticas de privacidad y cookies.</p>\n<p class=\"small\">Última actualización: 17 de noviembre de 2026.</p>"
+  }
+ },
+ "photos": {
+  "nadia": {
+   "file": "monitora-fitdance.webp",
+   "alt": "Nadia, monitora de Nadia Fitness Dance Studio, con micrófono antes de una clase",
+   "w": 840,
+   "h": 840
+  },
+  "outdoor1": {
+   "file": "clase-aire-libre-1.webp",
+   "alt": "Tres monitoras de espaldas, con los brazos en alto, dirigen una clase de baile al aire libre junto al mar",
+   "w": 1600,
+   "h": 500
+  },
+  "outdoor2": {
+   "file": "clase-aire-libre-2.webp",
+   "alt": "Tres monitoras de espaldas, en plena coreografía, dirigen una clase de baile al aire libre junto al mar",
+   "w": 1600,
+   "h": 478
+  }
+ },
+ "groups": [
+  {
+   "id": "peques",
+   "title": "Peques",
+   "lead": "Primeros pasos de baile, jugando.",
+   "classes": [
+    "dance-baby"
+   ],
+   "photo": null
+  },
+  {
+   "id": "niveles",
+   "title": "Dance por niveles",
+   "lead": "Intermedio 1, Intermedio 2 y Avanzado.",
+   "classes": [
+    "dance-intermedio",
+    "dance-avanzado"
+   ],
+   "photo": {
+    "src": "bailarina.webp",
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "alt": "Bailarina en plena coreografía"
+   }
+  },
+  {
+   "id": "adultos",
+   "title": "Baile para adultos",
+   "lead": "WeDance y Fitdance, sin experiencia previa.",
+   "classes": [
+    "wedance-adultos",
+    "fitdance"
+   ],
+   "photo": {
+    "src": "clase-aire-libre-1.webp",
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "alt": "Monitoras dirigiendo una clase de baile al aire libre junto al mar"
+   }
+  },
+  {
+   "id": "fitness",
+   "title": "Fitness",
+   "lead": "PowerHIIT y Aquafitness, mañana y tarde.",
+   "classes": [
+    "powerhiit",
+    "aquafitness"
+   ],
+   "photo": null
+  }
+ ]
+}
