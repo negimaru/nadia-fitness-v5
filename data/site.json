@@ -455,5 +455,18 @@
    ],
    "photo": null
   }
- ]
+ ],
+ "welcome": {
+  "heroTitle": "Un espacio para bailar, entrenar",
+  "heroAccent": "y superar tus límites",
+  "heroLead": "Tu mejor versión empieza aquí.",
+  "title": "Bienvenidos a Nadia Fitness Dance Studio",
+  "body": [
+   "Un espacio donde el baile, el deporte y la pasión se unen para hacerte disfrutar de cada clase.",
+   "Ofrecemos clases para todas las edades y niveles, desde los más pequeños hasta adultos, con una amplia variedad de actividades adaptadas a tus objetivos: clases de baile, entrenamiento funcional, aquafitness, clases dirigidas y pilates.",
+   "Nuestro objetivo va más allá de entrenar: queremos que ganes confianza, descubras tu potencial, superes tus límites y formes parte de una comunidad llena de energía y motivación.",
+   "No importa tu edad ni tu nivel. Lo importante es dar el primer paso."
+  ],
+  "cta": "Descubre tu actividad y únete a nosotros"
+ }
 }

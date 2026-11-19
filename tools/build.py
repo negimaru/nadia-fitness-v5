@@ -438,6 +438,7 @@ def nadia_block(p, eager=False, more=True):
 def page_home():
     p = ""
     hero = D["photos"]["outdoor2"]
+    W = D["welcome"]   # Nadia's own home copy
     classes_line = join_words([g["title"].lower() if i else g["title"] for i, g in enumerate(GROUPS)])
     return head(p, "", f'{S["name"]} · Baile y fitness en Torrox Costa',
                 "Academia de baile y fitness en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
@@ -446,16 +447,22 @@ def page_home():
 {img(p, hero, "hero-img", "100vw", eager=True)}
 <div class="wrap hero-in">
 <div class="hero-box">
-<h1 id="hero-title">Elige tu clase<br> de baile <em>o fitness</em></h1>
-<p>Grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates. De lunes a viernes en {e(S["locality"])}.</p>
+<h1 id="hero-title">{e(W["heroTitle"])} <em>{e(W["heroAccent"])}</em></h1>
+<p>{e(W["heroLead"])} Baile por niveles, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes en {e(S["locality"])}.</p>
 <p class="hero-actions"><a class="btn-primary" href="{TEL}">{I_PHONE}Llamar al {S["phone"]}</a><a class="link-cta link-on-dark" href="horario/">Ver el horario <span aria-hidden="true">→</span></a></p>
 </div>
 </div>
 </section>
 
+<section class="sec sec-alt" id="bienvenida" aria-labelledby="bienvenida-title">
+<div class="wrap">
+<div class="sec-head"><h2 id="bienvenida-title">{e(W["title"])}</h2>{"".join(f'<p class="sec-lead">{e(t)}</p>' for t in W["body"])}</div>
+</div>
+</section>
+
 <section class="sec" id="elige" aria-labelledby="elige-title">
 <div class="wrap">
-{sec_head("elige", "¿Para quién es la clase?", f"{classes_line}: cada grupo con su horario fijo.")}
+{sec_head("elige", e(W["cta"]), f"{classes_line}: cada grupo con su horario fijo.")}
 {tiles(p)}
 </div>
 </section>
