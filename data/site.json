@@ -157,6 +157,19 @@
    "photo": "clases/aquafitness.webp",
    "photoAlt": "",
    "placeholder": true
+  },
+  {
+   "id": "pilates",
+   "name": "Pilates",
+   "type": "fit",
+   "kind": "Fitness",
+   "audience": "Adultos",
+   "instructor": "Elena",
+   "summary": "Clase de pilates con Elena, los lunes y miércoles por la mañana.",
+   "description": "Clase de pilates con Elena, los lunes y miércoles por la mañana.",
+   "photo": "clases/pilates.webp",
+   "photoAlt": "",
+   "placeholder": true
   }
  ],
  "sessions": [
@@ -335,6 +348,22 @@
    "end": "21:30",
    "label": "",
    "note": "Clase dirigida"
+  },
+  {
+   "class": "pilates",
+   "day": 0,
+   "start": "10:00",
+   "end": "11:00",
+   "label": "",
+   "note": "Con Elena"
+  },
+  {
+   "class": "pilates",
+   "day": 2,
+   "start": "10:00",
+   "end": "11:00",
+   "label": "",
+   "note": "Con Elena"
   }
  ],
  "legal": {
@@ -418,10 +447,11 @@
   {
    "id": "fitness",
    "title": "Fitness",
-   "lead": "PowerHIIT y Aquafitness, mañana y tarde.",
+   "lead": "PowerHIIT, Aquafitness y Pilates, mañana y tarde.",
    "classes": [
     "powerhiit",
-    "aquafitness"
+    "aquafitness",
+    "pilates"
    ],
    "photo": null
   }

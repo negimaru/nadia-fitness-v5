@@ -258,7 +258,7 @@ def client_data():
 def json_ld():
     data = {
         "@context": "https://schema.org", "@type": "SportsActivityLocation", "name": S["name"],
-        "description": S["tagline"] + ": grupos de dance por niveles, Fitdance, PowerHIIT y Aquafitness.",
+        "description": S["tagline"] + ": grupos de dance por niveles, Fitdance, PowerHIIT, Aquafitness y Pilates.",
         "url": SITE, "telephone": S["phoneIntl"], "image": SITE + "assets/img/og-nadia-fitness.jpg",
         "address": {"@type": "PostalAddress", "streetAddress": S["street"], "postalCode": S["postalCode"],
                     "addressLocality": S["locality"], "addressRegion": S["region"], "addressCountry": S["country"]},
@@ -318,7 +318,7 @@ def class_detail(p, c, n):
     return f'''<article class="cd" id="{c["id"]}">
 {photo}
 <div class="cd-main">
-<p class="cl-aud">{e(kind_label(c))}</p>
+<p class="cl-aud">{e(kind_label(c))}{" · con " + e(c["instructor"]) if c.get("instructor") else ""}</p>
 <h3 class="cd-name"><span class="dot dot-{c["type"]}" aria-hidden="true"></span>{e(c["name"])}</h3>
 <p class="cd-desc">{e(c["description"])}</p>
 <ul class="cl-when" aria-label="Horario de {e(c["name"])}">{when}</ul>
@@ -426,7 +426,7 @@ def nadia_block(p, eager=False, more=True):
     return f'''<div class="nadia">
 {img(p, nadia, "nadia-photo", "(max-width: 860px) calc(100vw - 32px), 475px", eager=eager)}
 <div class="nadia-text">
-<p class="big">Monitora de todos los grupos: dance por niveles, desde los más pequeños hasta adultos, y Fitdance, PowerHIIT y Aquafitness.</p>
+<p class="big">Monitora de los grupos de dance por niveles, desde los más pequeños hasta adultos, y de Fitdance, PowerHIIT y Aquafitness.</p>
 <p>Cada persona avanza a su ritmo: técnica y coreografía, entrenamiento en serio y buen ambiente. Si nunca has bailado, te ayuda a encontrar tu grupo.</p>
 {rating()}
 {link}
@@ -440,14 +440,14 @@ def page_home():
     hero = D["photos"]["outdoor2"]
     classes_line = join_words([g["title"].lower() if i else g["title"] for i, g in enumerate(GROUPS)])
     return head(p, "", f'{S["name"]} · Baile y fitness en Torrox Costa',
-                "Academia de baile y fitness en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT y Aquafitness, de lunes a viernes.",
+                "Academia de baile y fitness en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
                 preload=(hero, "100vw")) + header(p, "") + f'''<main id="main">
 <section class="hero" aria-labelledby="hero-title">
 {img(p, hero, "hero-img", "100vw", eager=True)}
 <div class="wrap hero-in">
 <div class="hero-box">
 <h1 id="hero-title">Elige tu clase<br> de baile <em>o fitness</em></h1>
-<p>Grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT y Aquafitness. De lunes a viernes en {e(S["locality"])}.</p>
+<p>Grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates. De lunes a viernes en {e(S["locality"])}.</p>
 <p class="hero-actions"><a class="btn-primary" href="{TEL}">{I_PHONE}Llamar al {S["phone"]}</a><a class="link-cta link-on-dark" href="horario/">Ver el horario <span aria-hidden="true">→</span></a></p>
 </div>
 </div>
@@ -465,7 +465,7 @@ def page_home():
 <div class="split-text">
 <h2 id="estudio-title" class="h-left">En el estudio</h2>
 <p class="big">{len(CLASSES)} clases y {len(SESSIONS)} sesiones a la semana, de {first_start()} a {last_end()}, en {e(S["street"])}, {e(S["locality"])}.</p>
-<p>Por la tarde, los grupos de dance por niveles; por la mañana y por la noche, PowerHIIT, Aquafitness en piscina exterior y Fitdance. Las plazas son limitadas por grupo, así que llama antes de venir.</p>
+<p>Por la tarde, los grupos de dance por niveles; por la mañana y por la noche, PowerHIIT, Pilates, Aquafitness en piscina exterior y Fitdance. Las plazas son limitadas por grupo, así que llama antes de venir.</p>
 {steps(p)}
 </div>
 {today_board(p)}
@@ -507,7 +507,7 @@ def page_classes():
 {"".join(arts)}
 </section>''')
     return head(p, "clases/", "Clases de baile y fitness en Torrox Costa · Nadia Fitness",
-                "Grupo Dance Baby, Intermedio, Avanzado y Adultos, Fitdance, PowerHIIT y Aquafitness en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
+                "Grupo Dance Baby, Intermedio, Avanzado y Adultos, Fitdance, PowerHIIT, Aquafitness y Pilates en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
 {titlebar(p, "Clases de baile y fitness", "Clases", "Cada clase tiene su grupo y su horario fijo de lunes a viernes. Para tarifas y plazas libres, llámanos.", legend())}
 <section class="sec sec-tight" aria-labelledby="elige-title">
 <div class="wrap">
@@ -553,7 +553,7 @@ def page_schedule():
 
 def page_about():
     p = "../"
-    teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(kind_label(c))}</span></li>' for c in CLASSES)
+    teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(kind_label(c))}</span></li>' for c in CLASSES if not c.get("instructor"))
     return head(p, "quien-soy/", "Quién soy · Nadia, monitora de baile y fitness en Torrox Costa",
                 "Nadia, monitora de Nadia Fitness Dance Studio en Torrox Costa: grupos de dance por niveles, Fitdance, PowerHIIT y Aquafitness.") + header(p, "quien-soy/") + f'''<main id="main">
 {titlebar(p, "Hola, soy Nadia", "Quién soy", "Monitora de baile y fitness en Torrox Costa.")}
