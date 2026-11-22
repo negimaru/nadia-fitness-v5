@@ -247,8 +247,8 @@ html:not(.js) .theme { display: none; }
 .print-row { margin-top: 24px; }
 
 /* Nadia */
-.nadia { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; }
-.nadia-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: 4px; }
+.nadia { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; }
+.nadia-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: 4px; position: sticky; top: calc(var(--navbar) + 24px); }   /* long text beside it */
 .nadia .big { font-size: 26px; line-height: 1.4; margin-bottom: 18px; }
 .nadia-text > p:not(.big):not(.rating) { color: var(--muted); }
 .nadia-text > p:not(.big):not(.rating) + p:not(.rating) { margin-top: 12px; }
@@ -421,6 +421,7 @@ html:not(.js) .theme { display: none; }
   .split, .phone-in, .contact, .nadia, .cd { grid-template-columns: minmax(0, 1fr); gap: 32px; }   /* rule 12 */
   .cd { gap: 18px; }
   .big, .nadia .big { font-size: 20px; }
+  .nadia-photo { position: static; }
   .steps { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .today { padding: 18px 16px; }
   .today-date { font-size: 34px; }

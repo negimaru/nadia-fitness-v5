@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 4, "js": 1}                   # bump to bust browser caches
+V = {"css": 5, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -423,12 +423,15 @@ def titlebar(p, title, crumb, lead="", extra=""):
 
 def nadia_block(p, eager=False, more=True):
     nadia = D["photos"]["nadia"]
+    H = D["about"]["home"]   # Nadia's mid-length text; the full one is on quien-soy/
     link = f'<p class="nadia-more"><a class="link-cta" href="{p}quien-soy/">Conoce a Nadia <span aria-hidden="true">→</span></a></p>' if more else ""
     return f'''<div class="nadia">
 {img(p, nadia, "nadia-photo", "(max-width: 860px) calc(100vw - 32px), 475px", eager=eager)}
 <div class="nadia-text">
-<p class="big">Monitora de los grupos de dance por niveles, desde los más pequeños hasta adultos, y de Fitdance, PowerHIIT y Aquafitness.</p>
-<p>Cada persona avanza a su ritmo: técnica y coreografía, entrenamiento en serio y buen ambiente. Si nunca has bailado, te ayuda a encontrar tu grupo.</p>
+{"".join(f'<p{' class="big"' if i == 0 else ""}>{e(t)}</p>' for i, t in enumerate(H["body"]))}
+<h3 class="h-small">{e(H["philosophyTitle"])}</h3>
+{"".join(f"<p>{e(t)}</p>" for t in H["philosophy"])}
+<p><b>{e(H["closing"])}</b></p>
 {rating()}
 {link}
 </div>
@@ -489,7 +492,7 @@ def page_home():
 
 <section class="sec sec-alt" id="nadia" aria-labelledby="nadia-title">
 <div class="wrap">
-{sec_head("nadia", "La monitora")}
+{sec_head("nadia", e(D["about"]["name"]), e(D["about"]["role"]))}
 {nadia_block(p)}
 </div>
 </section>
