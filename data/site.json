@@ -476,14 +476,14 @@
   "body": [
    "Un espacio donde el baile, el deporte y la pasión se unen para hacerte disfrutar de cada clase.",
    "Ofrecemos clases para todas las edades y niveles, desde los más pequeños hasta adultos, con una amplia variedad de actividades adaptadas a tus objetivos: clases de baile, entrenamiento funcional, aquafitness, clases dirigidas y pilates.",
-   "Nuestro objetivo va más allá de entrenar: queremos que ganes confianza, descubras tu potencial, superes tus límites y formes parte de una comunidad llena de energía y motivación.",
-   "No importa tu edad ni tu nivel. Lo importante es dar el primer paso."
+   "Nuestro objetivo va más allá de entrenar: queremos que ganes confianza, descubras tu potencial, superes tus límites y formes parte de una comunidad llena de energía y motivación."
   ],
   "cta": "Descubre tu actividad y únete a nosotros",
   "choose": [
    "En Nadia Fitness Dance Studio tenemos un espacio para ti, independientemente de tu edad, experiencia o condición física.",
    "Desde los primeros pasos de baile hasta los entrenamientos más intensos, ofrecemos actividades adaptadas a diferentes niveles y objetivos."
-  ]
+  ],
+  "quote": "No importa tu edad ni tu nivel. Lo importante es dar el primer paso."
  },
  "about": {
   "name": "Nadia González Salvatierra",
@@ -512,9 +512,9 @@
     "body": [
      "Creo firmemente que no hace falta tener experiencia para comenzar, sino ganas de aprender y superarse.",
      "Por eso, en mis clases doy especial importancia a crear un ambiente cercano, motivador y positivo, donde cada alumno se sienta cómodo, valorado y capaz de avanzar a su propio ritmo.",
-     "Me gusta combinar la disciplina y el esfuerzo con la diversión, porque considero que los mejores resultados llegan cuando disfrutas de lo que haces.",
-     "No se trata de ser mejor que los demás, sino de descubrir hasta dónde puedes llegar."
-    ]
+     "Me gusta combinar la disciplina y el esfuerzo con la diversión, porque considero que los mejores resultados llegan cuando disfrutas de lo que haces."
+    ],
+    "quote": "No se trata de ser mejor que los demás, sino de descubrir hasta dónde puedes llegar."
    },
    {
     "title": "Mi mayor motivación",
@@ -527,7 +527,11 @@
     ]
    }
   ],
-  "closing": "Bienvenidos a Nadia Fitness Dance Studio. Un lugar para sentir, aprender, entrenar y brillar.",
+  "closing": {
+   "lead": "Bienvenidos a Nadia Fitness Dance Studio.",
+   "title": "Un lugar para sentir, aprender, entrenar y",
+   "accent": "brillar"
+  },
   "home": {
    "body": [
     "Soy Nadia González, bailarina profesional, coreógrafa, instructora de fitness y fundadora de Nadia Fitness Dance Studio, un proyecto nacido de mi pasión por el baile, el deporte y la enseñanza.",

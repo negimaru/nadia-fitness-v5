@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 5, "js": 1}                   # bump to bust browser caches
+V = {"css": 6, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -284,6 +284,16 @@ def sec_head(ident, title, lead=""):
     return f'<div class="sec-head"><h2 id="{ident}-title">{title}</h2>{lp}</div>'
 
 
+def story(ident, title, body, quote=None, h="h2"):
+    """Long text block: heading left, text right; first paragraph is the lead, an optional pull quote ends it."""
+    paras = "".join(f'<p{' class="story-lead"' if i == 0 else ""}>{e(t)}</p>' for i, t in enumerate(body))
+    q = f'<p class="story-quote">{e(quote)}</p>' if quote else ""
+    return f'''<div class="story">
+<{h} id="{ident}-title" class="h-left story-title">{e(title)}</{h}>
+<div class="story-body">{paras}{q}</div>
+</div>'''
+
+
 def tiles(p, hl="h3", on_classes_page=False):
     """'Elige tu clase': four square tiles, one per group. Four fill a row (rule 8): 4 / 2+2 / 1."""
     out = []
@@ -459,7 +469,7 @@ def page_home():
 
 <section class="sec sec-alt" id="bienvenida" aria-labelledby="bienvenida-title">
 <div class="wrap">
-<div class="sec-head"><h2 id="bienvenida-title">{e(W["title"])}</h2>{"".join(f'<p class="sec-lead">{e(t)}</p>' for t in W["body"])}</div>
+{story("bienvenida", W["title"], W["body"], W.get("quote"))}
 </div>
 </section>
 
@@ -566,7 +576,8 @@ def page_about():
     A = D["about"]   # Nadia's own text
     teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(kind_label(c))}</span></li>' for c in CLASSES if not c.get("instructor"))
     intro = "".join(f'<p{" class=\"big\"" if i == 0 else ""}>{e(t)}</p>' for i, t in enumerate(A["intro"]["body"]))
-    sections = "".join(f'<h2>{e(sec["title"])}</h2>' + "".join(f"<p>{e(t)}</p>" for t in sec["body"]) for sec in A["sections"])
+    sections = "".join(story(f"about-{i}", sec["title"], sec["body"], sec.get("quote")) for i, sec in enumerate(A["sections"], 1))
+    C = A["closing"]
     return head(p, "quien-soy/", f'Quién soy · {A["name"]}, {S["name"]}',
                 f'{A["name"]}, bailarina, coreógrafa e instructora de fitness, fundadora de {S["name"]} en {S["locality"]}.') + header(p, "quien-soy/") + f'''<main id="main">
 {titlebar(p, e(A["name"]), "Quién soy", e(A["role"]))}
@@ -585,9 +596,9 @@ def page_about():
 </div>
 </section>
 <section class="sec sec-alt" aria-label="Sobre mi trabajo">
-<div class="wrap prose">
+<div class="wrap">
 {sections}
-<p class="big"><b>{e(A["closing"])}</b></p>
+<div class="closing"><p>{e(C["lead"])}</p><p class="closing-title">{e(C["title"])} <em>{e(C["accent"])}</em>.</p></div>
 </div>
 </section>
 <figure class="photo-band">{img(p, D["photos"]["outdoor1"], "photo-band-img", "100vw")}</figure>
