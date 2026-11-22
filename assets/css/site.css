@@ -411,7 +411,7 @@ html:not(.js) .theme { display: none; }
   .js #menu.is-open .menu-phone a { display: inline-flex; align-items: center; gap: 12px; color: var(--band-pink); }
   html:not(.js) #menu { grid-column: 1 / -1; flex-wrap: wrap; gap: 0 18px; padding-bottom: 6px; }   /* rule 13: no burger without JS */
   html:not(.js) #menu a { padding: 8px 0; font-size: 19px; }
-  .hero-img { height: 260px; }
+  .hero-img { height: min(260px, 28vh); }   /* short phones: keep the call button above the fold */
   .hero { background: var(--band); }
   .hero-in { margin-top: 0; }
   .hero-box { max-width: none; border-left: 0; border-top: 6px solid var(--band-pink); padding: 24px 0 36px; }

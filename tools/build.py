@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 3, "js": 1}                   # bump to bust browser caches
+V = {"css": 4, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -50,7 +50,8 @@ def slot_of(s):
 
 
 def name_of(s):
-    return s["label"] or BY_ID[s["class"]]["name"]
+    c = BY_ID[s["class"]]
+    return s["label"] or c.get("short") or c["name"]   # short names keep timetable cells on one line
 
 
 def by_time(items):
@@ -238,7 +239,7 @@ def footer(p):
 </div>
 <div class="foot-legal"><div class="wrap foot-legal-in"><p>© <span id="year">2026</span> {e(S["name"])} · {e(S["locality"])}</p>
 <p><a href="{p}aviso-legal/">Aviso legal</a> · <a href="{p}privacidad/">Privacidad</a> · Propuesta de diseño v5</p></div></div>
-<nav class="callbar" aria-label="Contacto rápido"><a class="callbar-call" href="{TEL}">{I_PHONE}Llamar</a>{ext(WHATSAPP, I_MSG + "WhatsApp", "callbar-wa")}</nav>
+<nav class="callbar" aria-label="Contacto rápido"><a class="callbar-call" href="{TEL}">{I_PHONE}<span class="sr-only">Llamar al </span>{S["phone"]}</a>{ext(WHATSAPP, I_MSG + "WhatsApp", "callbar-wa")}</nav>
 </footer>
 <script type="application/json" id="nf-data">{client_data()}</script>
 </body>
@@ -344,7 +345,7 @@ def timetable(p, heading_level=3):
             items = by_time([s for s in SESSIONS if s["day"] == d and slot_of(s) == slot])
             cells.append("<td>" + ("<ul>" + "".join(item(s) for s in items) + "</ul>" if items else "") + "</td>")
         rows.append(f'<tr><th scope="row">{slot}</th>{"".join(cells)}</tr>')
-    filters = "".join(f'<button type="button" class="filter f-{c["type"]}" data-class="{c["id"]}" aria-pressed="false">{e(c["name"])}</button>' for c in CLASSES)
+    filters = "".join(f'<button type="button" class="filter f-{c["type"]}" data-class="{c["id"]}" aria-pressed="false">{e(c.get("short") or c["name"])}</button>' for c in CLASSES)
     tabs, days = [], []
     for i, d in enumerate(DAYS):
         items = by_time([s for s in SESSIONS if s["day"] == i])
