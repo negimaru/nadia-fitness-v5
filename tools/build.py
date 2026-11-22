@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 6, "js": 1}                   # bump to bust browser caches
+V = {"css": 7, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -439,9 +439,11 @@ def nadia_block(p, eager=False, more=True):
 {img(p, nadia, "nadia-photo", "(max-width: 860px) calc(100vw - 32px), 475px", eager=eager)}
 <div class="nadia-text">
 {"".join(f'<p{' class="big"' if i == 0 else ""}>{e(t)}</p>' for i, t in enumerate(H["body"]))}
+<ul class="duo">{"".join(f'<li><h3 class="duo-title"><span class="dot dot-{x["type"]}" aria-hidden="true"></span>{e(x["label"])}</h3><p>{e(x["text"])}</p></li>' for x in H["disciplines"])}</ul>
 <h3 class="h-small">{e(H["philosophyTitle"])}</h3>
+<p class="story-quote">{e(H["philosophyQuote"])}</p>
 {"".join(f"<p>{e(t)}</p>" for t in H["philosophy"])}
-<p><b>{e(H["closing"])}</b></p>
+<p class="nadia-closing">{e(H["closing"]["title"])} <em>{e(H["closing"]["accent"])}</em>.</p>
 {rating()}
 {link}
 </div>
