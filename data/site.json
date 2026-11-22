@@ -1,7 +1,8 @@
 {
  "studio": {
   "name": "Nadia Fitness Dance Studio",
-  "tagline": "Academia de baile y fitness en Torrox Costa",
+  "tagline": "Centro de baile, fitness y bienestar en Torrox Costa",
+  "summary": "Formación en baile comercial y moderna para todas las edades y niveles, entrenamiento funcional y actividades dirigidas para mejorar la condición física y el bienestar.",
   "phone": "654 691 336",
   "phoneIntl": "+34654691336",
   "whatsapp": "34654691336",
@@ -76,7 +77,7 @@
  "classes": [
   {
    "id": "dance-baby",
-   "name": "Grupo Dance Baby",
+   "name": "Grupo de baile baby",
    "type": "dance",
    "kind": "Baile",
    "audience": "De 3 a 6 años",
@@ -88,11 +89,11 @@
   },
   {
    "id": "dance-intermedio",
-   "name": "Grupos de nivel intermedio",
+   "name": "Grupos de baile nivel intermedio",
    "short": "Intermedio",
    "type": "dance",
    "kind": "Baile",
-   "audience": "Desde 7 años",
+   "audience": "A partir de 7 años",
    "summary": "Intermedio 1, Intermedio 2 e Intermedio 3, a partir de 7 años. Grupos de nivel intermedio para aprender a partir del nivel de cada uno y seguir progresando en técnica.",
    "description": "Intermedio 1, Intermedio 2 e Intermedio 3, a partir de 7 años. Grupos de nivel intermedio para aprender a partir del nivel de cada uno y seguir progresando en técnica.",
    "photo": "clases/dance-intermedio.webp",
@@ -114,7 +115,7 @@
   },
   {
    "id": "wedance-adultos",
-   "name": "WeDance, grupo de baile para adultos",
+   "name": "Grupo de baile para adultos (WeDance)",
    "short": "WeDance",
    "type": "dance",
    "kind": "Baile",
@@ -127,7 +128,8 @@
   },
   {
    "id": "fitdance",
-   "name": "Fitdance",
+   "name": "Clase dirigida (FitDance)",
+   "short": "Fitdance",
    "type": "fit",
    "kind": "Baile y fitness",
    "audience": "Adultos",
@@ -154,7 +156,7 @@
    "id": "aquafitness",
    "name": "Aquafitness",
    "type": "fit",
-   "kind": "Fitness en el agua",
+   "kind": "Entrenamiento en el agua",
    "audience": "Adultos",
    "summary": "Ejercicio en el agua dinámico, en piscina cubierta, donde hacemos trabajo cardiovascular, de fuerza y core. Todo bajo impacto.",
    "description": "Ejercicio en el agua dinámico, en piscina cubierta, donde hacemos trabajo cardiovascular, de fuerza y core. Todo bajo impacto.",

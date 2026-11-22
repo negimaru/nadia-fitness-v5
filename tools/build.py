@@ -227,6 +227,7 @@ def footer(p):
 <div class="wrap foot-grid">
 <div class="foot-brand"><img class="foot-logo" src="{p}assets/img/logo-280.webp" srcset="{p}assets/img/logo-140.webp 140w, {p}assets/img/logo-200.webp 200w, {p}assets/img/logo-280.webp 280w, {p}assets/img/logo-340.webp 340w, {p}assets/img/logo-400.webp 400w" sizes="190px" alt="" width="220" height="120" loading="lazy">
 <p>{e(S["tagline"])}.</p>
+<p>{e(S["summary"])}</p>
 {socials("social social-foot")}</div>
 <div><h2 class="foot-title">Contacto</h2>
 <address>{e(S["street"])}<br>{S["postalCode"]} {e(S["locality"])}, {e(S["region"])}</address>
@@ -456,7 +457,7 @@ def page_home():
     hero = D["photos"]["outdoor2"]
     W = D["welcome"]   # Nadia's own home copy
     return head(p, "", f'{S["name"]} · Baile y fitness en Torrox Costa',
-                "Academia de baile y fitness en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
+                "Centro de baile, fitness y bienestar en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
                 preload=(hero, "100vw")) + header(p, "") + f'''<main id="main">
 <section class="hero" aria-labelledby="hero-title">
 {img(p, hero, "hero-img", "100vw", eager=True)}
@@ -529,7 +530,7 @@ def page_classes():
 {"".join(arts)}
 </section>''')
     return head(p, "clases/", "Clases de baile y fitness en Torrox Costa · Nadia Fitness",
-                "Grupo Dance Baby (3 a 6 años), grupos intermedios y avanzado, WeDance para adultos, Fitdance, PowerHIIT, Aquafitness y Pilates en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
+                "Grupo de baile baby (3 a 6 años), grupos de baile intermedio y avanzado, WeDance para adultos, Fitdance, PowerHIIT, Aquafitness y Pilates en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
 {titlebar(p, "Clases de baile y fitness", "Clases", "Cada clase tiene su grupo y su horario fijo de lunes a viernes. Para tarifas y plazas libres, llámanos.", legend())}
 <section class="sec sec-tight" aria-labelledby="elige-title">
 <div class="wrap">
@@ -576,7 +577,9 @@ def page_schedule():
 def page_about():
     p = "../"
     A = D["about"]   # Nadia's own text
-    teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(kind_label(c))}</span></li>' for c in CLASSES if not c.get("instructor"))
+    # dance groups show their age range (when they have one), fitness classes their kind
+    note = lambda c: (c["audience"] if "años" in c["audience"] else "") if c["type"] == "dance" else c["kind"]
+    teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(note(c))}</span></li>' for c in CLASSES if not c.get("instructor"))
     intro = "".join(f'<p{" class=\"big\"" if i == 0 else ""}>{e(t)}</p>' for i, t in enumerate(A["intro"]["body"]))
     sections = "".join(story(f"about-{i}", sec["title"], sec["body"], sec.get("quote")) for i, sec in enumerate(A["sections"], 1))
     C = A["closing"]
