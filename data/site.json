@@ -578,5 +578,19 @@
   "goal": "Nuestro objetivo es ofrecer diferentes opciones y horarios para que cada persona pueda encontrar una actividad que se adapte a sus necesidades y disponibilidad.",
   "location": "Urbanización Santa Rosa, Calle Margarita 6, Torrox Costa",
   "note": "Las plazas son limitadas por grupo para garantizar una atención cercana y de calidad. Te recomendamos consultar la disponibilidad antes de incorporarte."
- }
+ },
+ "steps": [
+  {
+   "title": "Descubre tu actividad",
+   "text": "Explora nuestras [clases](clases/) y [horarios](horario/). Elige la disciplina que mejor se adapte a tus intereses, objetivos y nivel."
+  },
+  {
+   "title": "Consulta disponibilidad",
+   "text": "Contacta con nosotros por [teléfono](tel) o [WhatsApp](whatsapp). Te asesoraremos, resolveremos tus dudas y confirmaremos la disponibilidad de plazas."
+  },
+  {
+   "title": "¡Comienza tu experiencia!",
+   "text": "Formaliza tu inscripción y prepárate para disfrutar de tu primera clase. ¡Empieza a formar parte de Nadia Fitness Dance Studio!"
+  }
+ ]
 }

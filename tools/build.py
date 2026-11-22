@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 8, "js": 1}                   # bump to bust browser caches
+V = {"css": 9, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -395,12 +395,20 @@ def phone_block(p, title="Reserva tu plaza llamando"):
 </section>'''
 
 
+def links(p, text):
+    """Escape text and turn [label](target) into links: a site path, or the keywords tel / whatsapp."""
+    def link(m):
+        label, target = m.group(1), m.group(2)
+        if target == "tel":
+            return f'<a href="{TEL}">{label}</a>'
+        if target == "whatsapp":
+            return ext(WHATSAPP, label)
+        return f'<a href="{p}{target}">{label}</a>'
+    return re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link, e(text))
+
+
 def steps(p):
-    return f'''<ol class="steps">
-<li><b>Elige tu clase</b> en el <a href="{p}horario/">horario</a>, según tu nivel y tu semana.</li>
-<li><b>Llámanos</b> o escríbenos: te decimos si hay plaza y te la reservamos.</li>
-<li><b>Ven a clase</b> con ropa cómoda, agua y ganas.</li>
-</ol>'''
+    return '<ol class="steps">' + "".join(f'<li><b>{e(x["title"])}</b> {links(p, x["text"])}</li>' for x in D["steps"]) + "</ol>"
 
 
 def rating(cls="rating"):
