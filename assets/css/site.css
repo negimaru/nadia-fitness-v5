@@ -250,10 +250,17 @@ html:not(.js) .theme { display: none; }
 .nadia { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; }
 .nadia-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: 4px; position: sticky; top: calc(var(--navbar) + 24px); }   /* long text beside it */
 .nadia .big { font-size: 26px; line-height: 1.4; margin-bottom: 18px; }
-.nadia-text > p:not(.big):not(.rating) { color: var(--muted); }
+.nadia-text > p:not(.big):not(.rating):not(.story-quote):not(.nadia-closing) { color: var(--muted); }
 .nadia-text > p:not(.big):not(.rating) + p:not(.rating) { margin-top: 12px; }
 .nadia-text > .h-small:first-child { margin-top: 0; }
 .nadia-more { margin-top: 20px; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.duo li { border-top: 1px solid var(--rule); padding-top: 14px; }
+.duo-title { display: flex; align-items: center; gap: 10px; font: 800 24px/1.1 var(--display); text-transform: uppercase; margin-bottom: 6px; }
+.duo p { color: var(--muted); }
+.nadia .nadia-text .story-quote { margin-top: 0; margin-bottom: 18px; }
+.nadia-closing { margin-top: 28px; color: var(--ink); font: 800 32px/1.08 var(--display); text-transform: uppercase; }
+.nadia-closing em { color: var(--pink-text); }
 .rating { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--rule); }
 .rating a { text-decoration: none; }
 .rating b { font: 800 36px/1 var(--display); margin-right: 6px; }
@@ -367,7 +374,7 @@ html:not(.js) .theme { display: none; }
 .story-body p { color: var(--muted); }
 .story-body p + p { margin-top: 14px; }
 .story-body .story-lead { color: var(--ink); font-size: 21px; line-height: 1.5; }
-.story-body .story-quote { margin-top: 32px; padding: 4px 0 4px 22px; border-left: 6px solid var(--pink); color: var(--ink); font: 800 32px/1.12 var(--display); text-transform: uppercase; }
+.story-body .story-quote, .nadia-text .story-quote { margin-top: 32px; padding: 4px 0 4px 22px; border-left: 6px solid var(--pink); color: var(--ink); font: 800 32px/1.12 var(--display); text-transform: uppercase; }
 .closing { text-align: center; padding: 56px 0 8px; border-top: 1px solid var(--rule); }
 .closing p { color: var(--muted); }
 .closing .closing-title { margin: 10px auto 0; max-width: 18ch; color: var(--ink); font: 800 56px/1.06 var(--display); text-transform: uppercase; }
@@ -435,10 +442,11 @@ html:not(.js) .theme { display: none; }
   .cd { gap: 18px; }
   .big, .nadia .big { font-size: 20px; }
   .nadia-photo { position: static; }
+  .nadia-closing { font-size: 28px; }
   .story { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 36px 0; }
   .story-title { position: static; font-size: 36px; }
   .story-body .story-lead { font-size: 19px; }
-  .story-body .story-quote { font-size: 26px; }
+  .story-body .story-quote, .nadia-text .story-quote { font-size: 26px; }
   .closing .closing-title { font-size: 40px; }
   .steps { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .today { padding: 18px 16px; }
@@ -478,6 +486,7 @@ html:not(.js) .theme { display: none; }
   .foot .callbar a:hover { filter: brightness(1.1); }
 }
 @media (max-width: 560px) {
+  .duo { grid-template-columns: minmax(0, 1fr); }
   .tiles { grid-template-columns: minmax(0, 1fr); }
   .tile { display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 16px; align-items: start; }
   .tile-img { grid-row: 1 / 4; }

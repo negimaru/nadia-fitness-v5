@@ -537,19 +537,32 @@
     "Soy Nadia González, bailarina profesional, coreógrafa, instructora de fitness y fundadora de Nadia Fitness Dance Studio, un proyecto nacido de mi pasión por el baile, el deporte y la enseñanza.",
     "Mi pasión por el movimiento me ha llevado a convertir aquello que más disfruto en mi profesión, creando un espacio donde personas de todas las edades y niveles puedan aprender, entrenar, disfrutar y superarse.",
     "Como directora de la academia, me encargo de desarrollar y coordinar las actividades, diseñar entrenamientos, crear coreografías y acompañar a mis alumnos en su evolución.",
-    "Mi trabajo combina dos disciplinas que forman parte de mi identidad profesional: el baile y el entrenamiento físico.",
-    "En el ámbito de la danza, trabajo con grupos infantiles, juveniles y adultos, desarrollando la técnica, la musicalidad, la coordinación y la expresión corporal. Como bailarina y coreógrafa, también participo en la preparación y realización de actuaciones, espectáculos y eventos.",
-    "En el ámbito del fitness, imparto actividades como PowerHIIT, FitDance y Aquafitness, ofreciendo entrenamientos dinámicos y adaptados a diferentes capacidades y objetivos."
+    "Mi trabajo combina dos disciplinas que forman parte de mi identidad profesional: el baile y el entrenamiento físico."
    ],
    "philosophyTitle": "Mi filosofía",
    "philosophy": [
-    "Creo firmemente que no hace falta tener experiencia para comenzar, sino ganas de aprender y superarse.",
     "Mi objetivo es crear un ambiente cercano, positivo y motivador, donde cada alumno se sienta cómodo, gane confianza y descubra todo lo que es capaz de conseguir.",
     "Una de mis mayores satisfacciones es ver la evolución de mis alumnos: desde los primeros pasos de baile de los más pequeños hasta los logros personales de quienes deciden comenzar a entrenar.",
     "Nadia Fitness Dance Studio es mucho más que una academia. Es el resultado de mi esfuerzo, creatividad y pasión por lo que hago. Un proyecto que continúa creciendo con la ilusión de ofrecer nuevas experiencias y oportunidades.",
     "Porque para mí, enseñar no es solo transmitir conocimientos, sino motivar, inspirar y ayudar a cada persona a descubrir su mejor versión."
    ],
-   "closing": "Un lugar para sentir, aprender, entrenar y brillar."
+   "closing": {
+    "title": "Un lugar para sentir, aprender, entrenar y",
+    "accent": "brillar"
+   },
+   "disciplines": [
+    {
+     "label": "Baile",
+     "type": "dance",
+     "text": "En el ámbito de la danza, trabajo con grupos infantiles, juveniles y adultos, desarrollando la técnica, la musicalidad, la coordinación y la expresión corporal. Como bailarina y coreógrafa, también participo en la preparación y realización de actuaciones, espectáculos y eventos."
+    },
+    {
+     "label": "Fitness",
+     "type": "fit",
+     "text": "En el ámbito del fitness, imparto actividades como PowerHIIT, FitDance y Aquafitness, ofreciendo entrenamientos dinámicos y adaptados a diferentes capacidades y objetivos."
+    }
+   ],
+   "philosophyQuote": "Creo firmemente que no hace falta tener experiencia para comenzar, sino ganas de aprender y superarse."
   }
  }
 }
