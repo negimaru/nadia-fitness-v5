@@ -288,7 +288,7 @@ def tiles(p, hl="h3", on_classes_page=False):
     out = []
     for g in GROUPS:
         href = f'#{g["id"]}' if on_classes_page else f'{p}clases/#{g["id"]}'
-        names = join_words([BY_ID[c]["name"].replace("Grupo ", "") for c in g["classes"]])
+        names = join_words([BY_ID[c].get("short") or BY_ID[c]["name"].replace("Grupo ", "") for c in g["classes"]])
         t = group_types(g)
         marks = ('<span class="dot dot-dance" aria-hidden="true"></span>' if t in ("dance", "mixed") else "") + \
                 ('<span class="dot dot-fit" aria-hidden="true"></span>' if t in ("fit", "mixed") else "")
@@ -439,7 +439,6 @@ def page_home():
     p = ""
     hero = D["photos"]["outdoor2"]
     W = D["welcome"]   # Nadia's own home copy
-    classes_line = join_words([g["title"].lower() if i else g["title"] for i, g in enumerate(GROUPS)])
     return head(p, "", f'{S["name"]} · Baile y fitness en Torrox Costa',
                 "Academia de baile y fitness en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
                 preload=(hero, "100vw")) + header(p, "") + f'''<main id="main">
@@ -462,7 +461,7 @@ def page_home():
 
 <section class="sec" id="elige" aria-labelledby="elige-title">
 <div class="wrap">
-{sec_head("elige", e(W["cta"]), f"{classes_line}: cada grupo con su horario fijo.")}
+<div class="sec-head"><h2 id="elige-title">{e(W["cta"])}</h2>{"".join(f'<p class="sec-lead">{e(t)}</p>' for t in W["choose"])}</div>
 {tiles(p)}
 </div>
 </section>
@@ -514,7 +513,7 @@ def page_classes():
 {"".join(arts)}
 </section>''')
     return head(p, "clases/", "Clases de baile y fitness en Torrox Costa · Nadia Fitness",
-                "Grupo Dance Baby, Intermedio, Avanzado y Adultos, Fitdance, PowerHIIT, Aquafitness y Pilates en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
+                "Grupo Dance Baby (3 a 6 años), grupos intermedios y avanzado, WeDance para adultos, Fitdance, PowerHIIT, Aquafitness y Pilates en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
 {titlebar(p, "Clases de baile y fitness", "Clases", "Cada clase tiene su grupo y su horario fijo de lunes a viernes. Para tarifas y plazas libres, llámanos.", legend())}
 <section class="sec sec-tight" aria-labelledby="elige-title">
 <div class="wrap">
