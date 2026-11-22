@@ -79,45 +79,48 @@
    "name": "Grupo Dance Baby",
    "type": "dance",
    "kind": "Baile",
-   "audience": "Peques",
-   "summary": "Los más pequeños de la academia se inician en el baile jugando: ritmo, coordinación y sus primeras coreografías en grupo.",
-   "description": "Los más pequeños de la academia se inician en el baile jugando: ritmo, coordinación y sus primeras coreografías en grupo.",
+   "audience": "De 3 a 6 años",
+   "summary": "Los más pequeños descubren el baile de forma divertida, desarrollando el ritmo, la coordinación, la creatividad y el trabajo en equipo.",
+   "description": "Los más pequeños descubren el baile de forma divertida, desarrollando el ritmo, la coordinación, la creatividad y el trabajo en equipo.",
    "photo": "clases/dance-baby.webp",
    "photoAlt": "",
-   "placeholder": true
+   "placeholder": false
   },
   {
    "id": "dance-intermedio",
-   "name": "Grupo Dance Intermedio",
+   "name": "Grupos de nivel intermedio",
+   "short": "Intermedio",
    "type": "dance",
    "kind": "Baile",
-   "audience": "Con base",
-   "summary": "Dos grupos, Intermedio 1 e Intermedio 2, para quien ya tiene base y quiere seguir progresando en técnica y coreografía.",
-   "description": "Dos grupos, Intermedio 1 e Intermedio 2, para quien ya tiene base y quiere seguir progresando en técnica y coreografía.",
+   "audience": "Desde 7 años",
+   "summary": "Intermedio 1, Intermedio 2 e Intermedio 3, a partir de 7 años. Grupos de nivel intermedio para aprender a partir del nivel de cada uno y seguir progresando en técnica.",
+   "description": "Intermedio 1, Intermedio 2 e Intermedio 3, a partir de 7 años. Grupos de nivel intermedio para aprender a partir del nivel de cada uno y seguir progresando en técnica.",
    "photo": "clases/dance-intermedio.webp",
    "photoAlt": "",
-   "placeholder": true
+   "placeholder": false
   },
   {
    "id": "dance-avanzado",
-   "name": "Grupo Dance Avanzado",
+   "name": "Grupo de baile nivel avanzado",
+   "short": "Avanzado",
    "type": "dance",
    "kind": "Baile",
    "audience": "Nivel avanzado",
-   "summary": "Coreografías más exigentes para quien ya domina la base y quiere ir un paso más allá.",
-   "description": "Coreografías más exigentes para quien ya domina la base y quiere ir un paso más allá.",
+   "summary": "Coreografías exigentes, con cierta dificultad, donde se requiere técnica y compromiso de asistencia.",
+   "description": "Coreografías exigentes, con cierta dificultad, donde se requiere técnica y compromiso de asistencia.",
    "photo": "clases/dance-avanzado.webp",
    "photoAlt": "",
-   "placeholder": true
+   "placeholder": false
   },
   {
    "id": "wedance-adultos",
-   "name": "WeDance Grupo Adulto",
+   "name": "WeDance, grupo de baile para adultos",
+   "short": "WeDance",
    "type": "dance",
    "kind": "Baile",
    "audience": "Adultos",
-   "summary": "Baile en grupo para adultos. Aprende coreografías, muévete y pásalo bien sin necesidad de experiencia previa.",
-   "description": "Baile en grupo para adultos. Aprende coreografías, muévete y pásalo bien sin necesidad de experiencia previa.",
+   "summary": "Clase grupal para adultos donde se adquiere ritmo y musicalidad, se aprende a bailar y se pasa bien.",
+   "description": "Clase grupal para adultos donde se adquiere ritmo y musicalidad, se aprende a bailar y se pasa bien.",
    "photo": "bailarina.webp",
    "photoAlt": "Bailarina en plena coreografía",
    "placeholder": false
@@ -128,8 +131,8 @@
    "type": "fit",
    "kind": "Baile y fitness",
    "audience": "Adultos",
-   "summary": "Clase dirigida que mezcla fitness y baile: cardio a ritmo de coreografía para sudar sin darte cuenta.",
-   "description": "Clase dirigida que mezcla fitness y baile: cardio a ritmo de coreografía para sudar sin darte cuenta.",
+   "summary": "Clase dirigida muy dinámica donde se combina entrenamiento y baile.",
+   "description": "Clase dirigida muy dinámica donde se combina entrenamiento y baile.",
    "photo": "monitora-fitdance.webp",
    "photoAlt": "Nadia, monitora de Fitdance, con micrófono",
    "placeholder": false
@@ -218,7 +221,7 @@
    "day": 0,
    "start": "16:30",
    "end": "17:30",
-   "label": "Grupo Dance Intermedio 1",
+   "label": "Grupo intermedio 1",
    "note": ""
   },
   {
@@ -234,7 +237,7 @@
    "day": 2,
    "start": "16:30",
    "end": "17:30",
-   "label": "Grupo Dance Intermedio 1",
+   "label": "Grupo intermedio 1",
    "note": ""
   },
   {
@@ -258,7 +261,7 @@
    "day": 0,
    "start": "17:30",
    "end": "18:30",
-   "label": "Grupo Dance Intermedio 2",
+   "label": "Grupo intermedio 2",
    "note": ""
   },
   {
@@ -274,7 +277,7 @@
    "day": 2,
    "start": "17:30",
    "end": "18:30",
-   "label": "Grupo Dance Intermedio 2",
+   "label": "Grupo intermedio 2",
    "note": ""
   },
   {
@@ -364,6 +367,14 @@
    "end": "11:00",
    "label": "",
    "note": "Con Elena"
+  },
+  {
+   "class": "dance-intermedio",
+   "day": 2,
+   "start": "18:30",
+   "end": "20:30",
+   "label": "Grupo intermedio 3",
+   "note": ""
   }
  ],
  "legal": {
@@ -403,8 +414,8 @@
  "groups": [
   {
    "id": "peques",
-   "title": "Peques",
-   "lead": "Primeros pasos de baile, jugando.",
+   "title": "Grupo baby",
+   "lead": "Primeros pasos de baile, de 3 a 6 años.",
    "classes": [
     "dance-baby"
    ],
@@ -412,8 +423,8 @@
   },
   {
    "id": "niveles",
-   "title": "Dance por niveles",
-   "lead": "Intermedio 1, Intermedio 2 y Avanzado.",
+   "title": "Grupos de baile por niveles",
+   "lead": "Intermedio 1, Intermedio 2, Intermedio 3 y Avanzado.",
    "classes": [
     "dance-intermedio",
     "dance-avanzado"
@@ -429,8 +440,8 @@
   },
   {
    "id": "adultos",
-   "title": "Baile para adultos",
-   "lead": "WeDance y Fitdance, sin experiencia previa.",
+   "title": "Clases para adultos",
+   "lead": "WeDance, clase de baile, y Fitdance, clase dirigida muy dinámica donde se combina entrenamiento y baile.",
    "classes": [
     "wedance-adultos",
     "fitdance"
@@ -447,7 +458,7 @@
   {
    "id": "fitness",
    "title": "Fitness",
-   "lead": "PowerHIIT, Aquafitness y Pilates, mañana y tarde.",
+   "lead": "Entrenamiento funcional (PowerHIIT), Aquafitness y Pilates.",
    "classes": [
     "powerhiit",
     "aquafitness",
@@ -467,6 +478,10 @@
    "Nuestro objetivo va más allá de entrenar: queremos que ganes confianza, descubras tu potencial, superes tus límites y formes parte de una comunidad llena de energía y motivación.",
    "No importa tu edad ni tu nivel. Lo importante es dar el primer paso."
   ],
-  "cta": "Descubre tu actividad y únete a nosotros"
+  "cta": "Descubre tu actividad y únete a nosotros",
+  "choose": [
+   "En Nadia Fitness Dance Studio tenemos un espacio para ti, independientemente de tu edad, experiencia o condición física.",
+   "Desde los primeros pasos de baile hasta los entrenamientos más intensos, ofrecemos actividades adaptadas a diferentes niveles y objetivos."
+  ]
  }
 }
