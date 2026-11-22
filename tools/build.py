@@ -417,10 +417,11 @@ def rating(cls="rating"):
 
 
 def numbers():
-    """The reference site's numbers band, with facts only (rule 7): all derived from the data."""
+    """The reference site's numbers band, with facts only (rule 7): derived from the data, except
+    studio.groupCount, which is Nadia's own figure (how many groups she runs) and is kept by hand."""
     r = S["rating"]
-    items = [(str(len(CLASSES)), "clases distintas"), (str(len(SESSIONS)), "sesiones cada semana"),
-             (str(len(GROUPS)), "tipos de grupo, de peques a adultos"), (r["value"], f'valoración en Google · {r["count"]} reseñas')]
+    items = [(str(len(CLASSES)), "variedades de clases"), (str(len(SESSIONS)), "sesiones a la semana"),
+             (str(S["groupCount"]), "grupos de clases"), (r["value"], f'valoración en Google · {r["count"]} reseñas')]
     lis = "".join(f'<li><b>{n}</b><span>{e(t)}</span></li>' for n, t in items)
     return f'''<section class="numbers" aria-labelledby="numbers-title">
 <div class="wrap"><h2 id="numbers-title" class="sr-only">El estudio en números</h2>
