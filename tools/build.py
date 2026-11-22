@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 7, "js": 1}                   # bump to bust browser caches
+V = {"css": 8, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -456,6 +456,7 @@ def page_home():
     p = ""
     hero = D["photos"]["outdoor2"]
     W = D["welcome"]   # Nadia's own home copy
+    T = D["studioIntro"]   # "Descubre nuestro estudio", Nadia's text; the session count comes from the data
     return head(p, "", f'{S["name"]} · Baile y fitness en Torrox Costa',
                 "Centro de baile, fitness y bienestar en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
                 preload=(hero, "100vw")) + header(p, "") + f'''<main id="main">
@@ -486,9 +487,12 @@ def page_home():
 <section class="sec sec-alt" id="estudio" aria-labelledby="estudio-title">
 <div class="wrap split">
 <div class="split-text">
-<h2 id="estudio-title" class="h-left">En el estudio</h2>
-<p class="big">{len(CLASSES)} clases y {len(SESSIONS)} sesiones a la semana, de {first_start()} a {last_end()}, en {e(S["street"])}, {e(S["locality"])}.</p>
-<p>Por la tarde, los grupos de dance por niveles; por la mañana y por la noche, PowerHIIT, Pilates, Aquafitness en piscina cubierta y Fitdance. Las plazas son limitadas por grupo, así que llama antes de venir.</p>
+<h2 id="estudio-title" class="h-left">{e(T["title"])}</h2>
+<p class="big">{e(T["lead"].format(sessions=len(SESSIONS)))}</p>
+<ul class="duo">{"".join(f"<li><p>{e(t)}</p></li>" for t in T["times"])}</ul>
+<p>{e(T["goal"])}</p>
+<p class="where-line">{I_PIN}{ext(S["mapsUrl"], e(T["location"]))}</p>
+<p>{e(T["note"])}</p>
 {steps(p)}
 </div>
 {today_board(p)}

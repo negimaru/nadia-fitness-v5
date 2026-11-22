@@ -78,6 +78,7 @@
   {
    "id": "dance-baby",
    "name": "Grupo de baile baby",
+   "short": "Grupo baby",
    "type": "dance",
    "kind": "Baile",
    "audience": "De 3 a 6 años",
@@ -566,5 +567,16 @@
    ],
    "philosophyQuote": "Creo firmemente que no hace falta tener experiencia para comenzar, sino ganas de aprender y superarse."
   }
+ },
+ "studioIntro": {
+  "title": "Descubre nuestro estudio",
+  "lead": "En Nadia Fitness Dance Studio ofrecemos una amplia variedad de actividades de baile, fitness y bienestar, con {sessions} sesiones semanales distribuidas entre la mañana y la tarde, adaptadas a diferentes edades, niveles y objetivos.",
+  "times": [
+   "Por las mañanas, contamos con actividades como entrenamiento funcional (PowerHIIT), Pilates y otras clases dirigidas, ideales para comenzar el día de forma activa.",
+   "Por las tardes, ofrecemos clases de baile para niños, jóvenes y adultos, organizadas por edades y niveles, además de actividades como FitDance, PowerHIIT y Aquafitness en piscina cubierta."
+  ],
+  "goal": "Nuestro objetivo es ofrecer diferentes opciones y horarios para que cada persona pueda encontrar una actividad que se adapte a sus necesidades y disponibilidad.",
+  "location": "Urbanización Santa Rosa, Calle Margarita 6, Torrox Costa",
+  "note": "Las plazas son limitadas por grupo para garantizar una atención cercana y de calidad. Te recomendamos consultar la disponibilidad antes de incorporarte."
  }
 }
