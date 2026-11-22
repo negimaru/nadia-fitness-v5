@@ -593,5 +593,13 @@
    "title": "¡Comienza tu experiencia!",
    "text": "Formaliza tu inscripción por [WhatsApp](whatsapp) con Nadia y prepárate para disfrutar de tu primera clase. ¡Empieza a formar parte de Nadia Fitness Dance Studio!"
   }
- ]
+ ],
+ "contactIntro": {
+  "question": "¿Quieres formar parte de Nadia Fitness Dance Studio?",
+  "body": [
+   "Contacta con nosotros para recibir información sobre nuestras actividades, horarios, tarifas y disponibilidad de plazas. Estaremos encantados de asesorarte y ayudarte a encontrar la clase que mejor se adapte a ti.",
+   "Para garantizar una atención personalizada, disponemos de un horario de atención telefónica que puedes consultar a continuación.",
+   "También puedes escribirnos por WhatsApp en cualquier momento y responderemos a tu consulta lo antes posible, dentro de nuestro horario de atención."
+  ]
+ }
 }
