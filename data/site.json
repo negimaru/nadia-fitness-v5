@@ -484,5 +484,49 @@
    "En Nadia Fitness Dance Studio tenemos un espacio para ti, independientemente de tu edad, experiencia o condición física.",
    "Desde los primeros pasos de baile hasta los entrenamientos más intensos, ofrecemos actividades adaptadas a diferentes niveles y objetivos."
   ]
+ },
+ "about": {
+  "name": "Nadia González Salvatierra",
+  "role": "Creadora, directora y coreógrafa de Nadia Fitness Dance Studio.",
+  "intro": {
+   "title": "Mi historia, mi pasión y mi proyecto",
+   "body": [
+    "Soy Nadia González, bailarina profesional, coreógrafa, instructora de fitness y fundadora de Nadia Fitness Dance Studio, un proyecto nacido de mi pasión por el baile, el deporte y la enseñanza.",
+    "Para mí, el movimiento es mucho más que una actividad física. Es una forma de expresión, de superación personal, de ganar confianza y de descubrir capacidades que muchas veces ni siquiera sabemos que tenemos.",
+    "Mi pasión por el baile y el entrenamiento me ha llevado a convertir aquello que más disfruto en mi profesión, creando un espacio donde personas de diferentes edades y niveles puedan aprender, entrenar, disfrutar y evolucionar."
+   ]
+  },
+  "sections": [
+   {
+    "title": "Mucho más que una academia",
+    "body": [
+     "Como creadora y directora de Nadia Fitness Dance Studio, me encargo de desarrollar y coordinar las actividades de la academia, diseñar entrenamientos, crear coreografías y acompañar a mis alumnos en su evolución.",
+     "Mi trabajo combina dos disciplinas que forman parte de mi identidad profesional: el baile y el entrenamiento físico.",
+     "En el ámbito de la danza, trabajo con grupos infantiles, juveniles y adultos, adaptando la enseñanza a cada etapa y nivel. A través de la técnica, la musicalidad, la coordinación, la expresión corporal y las coreografías, busco que cada alumno desarrolle sus habilidades y encuentre su propia personalidad al bailar.",
+     "Como coreógrafa y bailarina, también participo en la preparación y realización de actuaciones, espectáculos, eventos y proyectos artísticos, llevando el trabajo más allá de las clases habituales.",
+     "En el ámbito del fitness, imparto actividades como PowerHIIT, FitDance y Aquafitness, combinando ejercicios de fuerza, resistencia, coordinación y trabajo cardiovascular. Mi objetivo es ofrecer entrenamientos completos, dinámicos y adaptables, en los que cada persona pueda progresar según sus capacidades."
+    ]
+   },
+   {
+    "title": "Mi filosofía de enseñanza",
+    "body": [
+     "Creo firmemente que no hace falta tener experiencia para comenzar, sino ganas de aprender y superarse.",
+     "Por eso, en mis clases doy especial importancia a crear un ambiente cercano, motivador y positivo, donde cada alumno se sienta cómodo, valorado y capaz de avanzar a su propio ritmo.",
+     "Me gusta combinar la disciplina y el esfuerzo con la diversión, porque considero que los mejores resultados llegan cuando disfrutas de lo que haces.",
+     "No se trata de ser mejor que los demás, sino de descubrir hasta dónde puedes llegar."
+    ]
+   },
+   {
+    "title": "Mi mayor motivación",
+    "body": [
+     "Una de las partes más bonitas de mi profesión es poder acompañar la evolución de mis alumnos: ver cómo un niño pierde la vergüenza y comienza a bailar con seguridad, cómo una persona que nunca ha entrenado descubre su fuerza o cómo un grupo consigue superar un reto que al principio parecía imposible.",
+     "Cada pequeño progreso, cada coreografía aprendida y cada objetivo conseguido son parte de lo que da sentido a este proyecto.",
+     "Nadia Fitness Dance Studio representa mi esfuerzo, mi creatividad y mis ganas de seguir creciendo profesionalmente, ofreciendo nuevas oportunidades para disfrutar del baile, el fitness y el bienestar en Torrox Costa.",
+     "Mi propósito es seguir construyendo una comunidad donde el movimiento una a las personas, donde cada alumno encuentre su lugar y donde nunca falten las ganas de aprender, mejorar y disfrutar.",
+     "Porque para mí, enseñar no es solo transmitir conocimientos: es motivar, inspirar y ayudar a cada persona a descubrir su mejor versión."
+    ]
+   }
+  ],
+  "closing": "Bienvenidos a Nadia Fitness Dance Studio. Un lugar para sentir, aprender, entrenar y brillar."
  }
 }
