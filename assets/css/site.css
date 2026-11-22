@@ -222,7 +222,8 @@ html:not(.js) .theme { display: none; }
 .steps { counter-reset: s; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .steps li { counter-increment: s; border-top: 1px solid var(--rule); padding-top: 14px; color: var(--muted); }
 .steps li::before { content: "0" counter(s); display: block; font: 800 22px/1 var(--display); color: var(--pink-text); margin-bottom: 8px; }
-.steps b { color: var(--ink); }
+.steps b { display: block; color: var(--ink); margin-bottom: 4px; }
+.steps a { text-decoration: underline; }
 
 /* Timetable */
 .filters { display: none; }
