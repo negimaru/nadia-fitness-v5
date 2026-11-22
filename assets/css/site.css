@@ -316,6 +316,11 @@ html:not(.js) .theme { display: none; }
 .page-intro:empty { display: none; }
 .lead { font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 60ch; }
 .page-intro .legend { margin-top: 16px; }
+.page-intro .lead + .intro-more { margin-top: 12px; }
+.intro-more { color: var(--muted); max-width: var(--measure); }
+.intro-more + .intro-more { margin-top: 10px; }
+.intro-more:last-child { margin-bottom: 40px; }
+.page-intro .lead:has(+ .intro-more) { color: var(--ink); font-weight: 600; }
 .split-top { align-items: end; }
 
 /* Classes page */

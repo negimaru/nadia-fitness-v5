@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 9, "js": 1}                   # bump to bust browser caches
+V = {"css": 10, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -627,10 +627,11 @@ def page_about():
 
 def page_contact():
     p = "../"
+    CI = D["contactIntro"]   # Nadia's text
     options = "".join(f'<option value="{c["id"]}">{e(c["name"])}</option>' for c in CLASSES) + '<option value="">Aún no lo sé</option>'
     return head(p, "contacto/", f'Contacto y reservas · {S["name"]}, Torrox Costa',
                 "Reserva tu plaza en Nadia Fitness Dance Studio, Torrox Costa: teléfono y horario de llamadas, WhatsApp, dirección y mapa.") + header(p, "contacto/") + f'''<main id="main">
-{titlebar(p, "Contacto y reservas", "Contacto", "Llámanos en horario de llamadas o escríbenos por WhatsApp: te decimos si queda plaza en el grupo y te la guardamos.")}
+{titlebar(p, "Contacto y reservas", "Contacto", e(CI["question"]), "".join(f'<p class="intro-more">{e(t)}</p>' for t in CI["body"]))}
 {phone_block(p, "Llámanos")}
 <section class="sec" aria-label="Escribir y cómo llegar">
 <div class="wrap contact">
