@@ -560,9 +560,9 @@ def page_schedule():
 def page_about():
     p = "../"
     teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(kind_label(c))}</span></li>' for c in CLASSES if not c.get("instructor"))
-    return head(p, "quien-soy/", "Quién soy · Nadia, monitora de baile y fitness en Torrox Costa",
+    return head(p, "quien-soy/", "Quién soy · Nadia, profesora de baile y entrenadora en Torrox Costa",
                 "Nadia, monitora de Nadia Fitness Dance Studio en Torrox Costa: grupos de dance por niveles, Fitdance, PowerHIIT y Aquafitness.") + header(p, "quien-soy/") + f'''<main id="main">
-{titlebar(p, "Hola, soy Nadia", "Quién soy", "Monitora de baile y fitness en Torrox Costa.")}
+{titlebar(p, "Hola, soy Nadia", "Quién soy", "Profesora de baile y entrenadora en Torrox Costa.")}
 <section class="sec sec-tight" aria-label="Sobre Nadia">
 <div class="wrap">
 <div class="nadia">
