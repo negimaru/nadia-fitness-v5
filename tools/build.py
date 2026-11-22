@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 10, "js": 1}                   # bump to bust browser caches
+V = {"css": 11, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -544,7 +544,7 @@ def page_classes():
 </section>''')
     return head(p, "clases/", "Clases de baile y fitness en Torrox Costa · Nadia Fitness",
                 "Grupo de baile baby (3 a 6 años), grupos de baile intermedio y avanzado, WeDance para adultos, Fitdance, PowerHIIT, Aquafitness y Pilates en Torrox Costa: para quién es cada clase, qué se hace y en qué horario.") + header(p, "clases/") + f'''<main id="main">
-{titlebar(p, "Clases de baile y fitness", "Clases", "Cada clase tiene su grupo y su horario fijo de lunes a viernes. Para tarifas y plazas libres, llámanos.", legend())}
+{titlebar(p, "Clases de baile y fitness", "Clases", links(p, D["classesIntro"][0]), "".join(f'<p class="intro-more">{links(p, t)}</p>' for t in D["classesIntro"][1:]) + legend())}
 <section class="sec sec-tight" aria-labelledby="elige-title">
 <div class="wrap">
 <h2 id="elige-title" class="sr-only">Elige tu grupo</h2>
@@ -631,7 +631,7 @@ def page_contact():
     options = "".join(f'<option value="{c["id"]}">{e(c["name"])}</option>' for c in CLASSES) + '<option value="">Aún no lo sé</option>'
     return head(p, "contacto/", f'Contacto y reservas · {S["name"]}, Torrox Costa',
                 "Reserva tu plaza en Nadia Fitness Dance Studio, Torrox Costa: teléfono y horario de llamadas, WhatsApp, dirección y mapa.") + header(p, "contacto/") + f'''<main id="main">
-{titlebar(p, "Contacto y reservas", "Contacto", e(CI["question"]), "".join(f'<p class="intro-more">{e(t)}</p>' for t in CI["body"]))}
+{titlebar(p, "Contacto y reservas", "Contacto", f'<b>{e(CI["question"])}</b>', "".join(f'<p class="intro-more">{e(t)}</p>' for t in CI["body"]))}
 {phone_block(p, "Llámanos")}
 <section class="sec" aria-label="Escribir y cómo llegar">
 <div class="wrap contact">
