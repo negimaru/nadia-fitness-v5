@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 2, "js": 1}                   # bump to bust browser caches
+V = {"css": 3, "js": 1}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -559,23 +559,31 @@ def page_schedule():
 
 def page_about():
     p = "../"
+    A = D["about"]   # Nadia's own text
     teach = "".join(f'<li><a href="{p}clases/#{c["id"]}">{e(c["name"])}</a><span>{e(kind_label(c))}</span></li>' for c in CLASSES if not c.get("instructor"))
-    return head(p, "quien-soy/", "Quién soy · Nadia, profesora de baile y entrenadora en Torrox Costa",
-                "Nadia, monitora de Nadia Fitness Dance Studio en Torrox Costa: grupos de dance por niveles, Fitdance, PowerHIIT y Aquafitness.") + header(p, "quien-soy/") + f'''<main id="main">
-{titlebar(p, "Hola, soy Nadia", "Quién soy", "Profesora de baile y entrenadora en Torrox Costa.")}
-<section class="sec sec-tight" aria-label="Sobre Nadia">
+    intro = "".join(f'<p{" class=\"big\"" if i == 0 else ""}>{e(t)}</p>' for i, t in enumerate(A["intro"]["body"]))
+    sections = "".join(f'<h2>{e(sec["title"])}</h2>' + "".join(f"<p>{e(t)}</p>" for t in sec["body"]) for sec in A["sections"])
+    return head(p, "quien-soy/", f'Quién soy · {A["name"]}, {S["name"]}',
+                f'{A["name"]}, bailarina, coreógrafa e instructora de fitness, fundadora de {S["name"]} en {S["locality"]}.') + header(p, "quien-soy/") + f'''<main id="main">
+{titlebar(p, e(A["name"]), "Quién soy", e(A["role"]))}
+<section class="sec sec-tight" aria-labelledby="about-intro-title">
 <div class="wrap">
 <div class="nadia">
 {img(p, D["photos"]["nadia"], "nadia-photo", "(max-width: 860px) calc(100vw - 32px), 475px", eager=True)}
 <div class="nadia-text">
-<!-- TODO: replace with Nadia's own words (background, training, years teaching) -->
-<p class="big">Soy la monitora de Nadia Fitness Dance Studio, en Torrox Costa. Doy clase a los grupos de dance por niveles, desde los más pequeños hasta adultos, y a Fitdance, PowerHIIT y Aquafitness.</p>
-<p>En mis clases cada persona avanza a su ritmo: aprendemos técnica y coreografía, entrenamos en serio y lo pasamos bien. Si nunca has bailado, te ayudo a encontrar tu grupo.</p>
+<h2 class="h-small" id="about-intro-title">{e(A["intro"]["title"])}</h2>
+{intro}
 {rating()}
 <h2 class="h-small">Las clases que doy</h2>
 <ul class="plain-list">{teach}</ul>
 </div>
 </div>
+</div>
+</section>
+<section class="sec sec-alt" aria-label="Sobre mi trabajo">
+<div class="wrap prose">
+{sections}
+<p class="big"><b>{e(A["closing"])}</b></p>
 </div>
 </section>
 <figure class="photo-band">{img(p, D["photos"]["outdoor1"], "photo-band-img", "100vw")}</figure>
