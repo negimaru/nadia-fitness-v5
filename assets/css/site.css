@@ -359,6 +359,19 @@ html:not(.js) .theme { display: none; }
 .prose a { text-decoration: underline; }
 .prose .big { margin-top: 32px; }
 .prose .big b { color: var(--ink); }
+/* Long text (Bienvenidos, Quién soy): heading left, text right, pull quote with the hero's pink bar */
+.story { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 56px; align-items: start; padding: 48px 0; border-top: 1px solid var(--rule); }
+.story:first-child { border-top: 0; padding-top: 0; }
+.story-title { position: sticky; top: calc(var(--navbar) + 24px); font-size: 44px; margin-bottom: 0; }
+.story-body > * { max-width: var(--measure); }
+.story-body p { color: var(--muted); }
+.story-body p + p { margin-top: 14px; }
+.story-body .story-lead { color: var(--ink); font-size: 21px; line-height: 1.5; }
+.story-body .story-quote { margin-top: 32px; padding: 4px 0 4px 22px; border-left: 6px solid var(--pink); color: var(--ink); font: 800 32px/1.12 var(--display); text-transform: uppercase; }
+.closing { text-align: center; padding: 56px 0 8px; border-top: 1px solid var(--rule); }
+.closing p { color: var(--muted); }
+.closing .closing-title { margin: 10px auto 0; max-width: 18ch; color: var(--ink); font: 800 56px/1.06 var(--display); text-transform: uppercase; }
+.closing em { color: var(--pink-text); }
 .ph-mark { background: transparent; color: var(--pink-text); border: 1px dashed var(--pink); border-radius: 3px; padding: 0 6px; font-weight: 600; }
 
 /* ---------- Footer (dark, columns like the reference site) ---------- */
@@ -422,6 +435,11 @@ html:not(.js) .theme { display: none; }
   .cd { gap: 18px; }
   .big, .nadia .big { font-size: 20px; }
   .nadia-photo { position: static; }
+  .story { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 36px 0; }
+  .story-title { position: static; font-size: 36px; }
+  .story-body .story-lead { font-size: 19px; }
+  .story-body .story-quote { font-size: 26px; }
+  .closing .closing-title { font-size: 40px; }
   .steps { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .today { padding: 18px 16px; }
   .today-date { font-size: 34px; }
