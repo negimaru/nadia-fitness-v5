@@ -179,6 +179,10 @@ html:not(.js) .theme { display: none; }
 .split-text > p + p { margin-top: 14px; }
 .split-text > p:not(.big) { color: var(--muted); max-width: var(--measure); }
 .split-text .steps { margin-top: 36px; }
+.split-text .duo { margin: 22px 0; max-width: var(--measure); }
+.split-text > .where-line { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 600; }
+.where-line .i { width: 20px; height: 20px; color: var(--pink-text); flex: none; }
+.where-line a { text-decoration: underline; text-decoration-color: var(--pink); text-decoration-thickness: 2px; }
 .split-text .legend { margin-top: 20px; }
 .h-small { font: 800 26px/1.1 var(--display); text-transform: uppercase; margin: 36px 0 10px; }
 
