@@ -139,15 +139,16 @@
   },
   {
    "id": "powerhiit",
-   "name": "PowerHIIT",
+   "name": "Entrenamiento funcional (PowerHIIT)",
+   "short": "PowerHIIT",
    "type": "fit",
    "kind": "Fitness",
    "audience": "Adultos",
-   "summary": "Entrenamiento funcional de alta intensidad por intervalos. Tienes grupo de mañana y de tarde para encajarlo en tu semana.",
-   "description": "Entrenamiento funcional de alta intensidad por intervalos. Tienes grupo de mañana y de tarde para encajarlo en tu semana.",
+   "summary": "Entrenamiento dinámico donde se combinan ejercicios de cardio y fuerza para mejorar la condición física, tonificar y superar tus límites.",
+   "description": "Entrenamiento dinámico donde se combinan ejercicios de cardio y fuerza para mejorar la condición física, tonificar y superar tus límites.",
    "photo": "clases/powerhiit.webp",
    "photoAlt": "",
-   "placeholder": true
+   "placeholder": false
   },
   {
    "id": "aquafitness",
@@ -182,7 +183,7 @@
    "start": "9:30",
    "end": "10:30",
    "label": "",
-   "note": "Entrenamiento funcional"
+   "note": ""
   },
   {
    "class": "powerhiit",
@@ -190,7 +191,7 @@
    "start": "9:30",
    "end": "10:30",
    "label": "",
-   "note": "Entrenamiento funcional"
+   "note": ""
   },
   {
    "class": "powerhiit",
@@ -198,7 +199,7 @@
    "start": "9:30",
    "end": "10:30",
    "label": "",
-   "note": "Entrenamiento funcional"
+   "note": ""
   },
   {
    "class": "aquafitness",
@@ -302,7 +303,7 @@
    "start": "19:30",
    "end": "20:30",
    "label": "",
-   "note": "Entrenamiento funcional"
+   "note": ""
   },
   {
    "class": "aquafitness",
@@ -318,7 +319,7 @@
    "start": "19:30",
    "end": "20:30",
    "label": "",
-   "note": "Entrenamiento funcional"
+   "note": ""
   },
   {
    "class": "aquafitness",
@@ -457,8 +458,8 @@
   },
   {
    "id": "fitness",
-   "title": "Fitness",
-   "lead": "Entrenamiento funcional (PowerHIIT), Aquafitness y Pilates.",
+   "title": "Fitness y bienestar",
+   "lead": "Entrenamiento funcional (PowerHIIT), Aquafitness, Pilates y clases dirigidas (Fitdance).",
    "classes": [
     "powerhiit",
     "aquafitness",
