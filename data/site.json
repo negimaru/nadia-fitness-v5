@@ -446,10 +446,9 @@
   {
    "id": "adultos",
    "title": "Clases para adultos",
-   "lead": "WeDance, clase de baile, y Fitdance, clase dirigida muy dinámica donde se combina entrenamiento y baile.",
+   "lead": "WeDance, clase de baile para adultos.",
    "classes": [
-    "wedance-adultos",
-    "fitdance"
+    "wedance-adultos"
    ],
    "photo": {
     "src": "clase-aire-libre-1.webp",
@@ -467,7 +466,8 @@
    "classes": [
     "powerhiit",
     "aquafitness",
-    "pilates"
+    "pilates",
+    "fitdance"
    ],
    "photo": null
   }
@@ -601,5 +601,9 @@
    "Para garantizar una atención personalizada, disponemos de un horario de atención telefónica que puedes consultar a continuación.",
    "También puedes escribirnos por WhatsApp en cualquier momento y responderemos a tu consulta lo antes posible, dentro de nuestro horario de atención."
   ]
- }
+ },
+ "classesIntro": [
+  "Descubre nuestras clases de baile, fitness y bienestar, adaptadas a todas las edades y niveles, con diferentes grupos y horarios de lunes a viernes.",
+  "Para consultar tarifas y disponibilidad de plazas, contacta con nosotros por [teléfono](tel) o [WhatsApp](whatsapp)."
+ ]
 }

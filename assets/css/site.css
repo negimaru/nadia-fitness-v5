@@ -320,7 +320,9 @@ html:not(.js) .theme { display: none; }
 .intro-more { color: var(--muted); max-width: var(--measure); }
 .intro-more + .intro-more { margin-top: 10px; }
 .intro-more:last-child { margin-bottom: 40px; }
-.page-intro .lead:has(+ .intro-more) { color: var(--ink); font-weight: 600; }
+.lead b { color: var(--ink); font-weight: 600; }
+.lead a { text-decoration: underline; }
+.intro-more a { text-decoration: underline; }
 .split-top { align-items: end; }
 
 /* Classes page */
