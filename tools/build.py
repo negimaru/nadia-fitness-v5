@@ -471,7 +471,7 @@ def page_home():
 <div class="split-text">
 <h2 id="estudio-title" class="h-left">En el estudio</h2>
 <p class="big">{len(CLASSES)} clases y {len(SESSIONS)} sesiones a la semana, de {first_start()} a {last_end()}, en {e(S["street"])}, {e(S["locality"])}.</p>
-<p>Por la tarde, los grupos de dance por niveles; por la mañana y por la noche, PowerHIIT, Pilates, Aquafitness en piscina exterior y Fitdance. Las plazas son limitadas por grupo, así que llama antes de venir.</p>
+<p>Por la tarde, los grupos de dance por niveles; por la mañana y por la noche, PowerHIIT, Pilates, Aquafitness en piscina cubierta y Fitdance. Las plazas son limitadas por grupo, así que llama antes de venir.</p>
 {steps(p)}
 </div>
 {today_board(p)}

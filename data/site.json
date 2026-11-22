@@ -156,11 +156,11 @@
    "type": "fit",
    "kind": "Fitness en el agua",
    "audience": "Adultos",
-   "summary": "Ejercicio en el agua, en piscina exterior: trabajo cardiovascular y de tono muscular con bajo impacto en las articulaciones.",
-   "description": "Ejercicio en el agua, en piscina exterior: trabajo cardiovascular y de tono muscular con bajo impacto en las articulaciones.",
+   "summary": "Ejercicio en el agua dinámico, en piscina cubierta, donde hacemos trabajo cardiovascular, de fuerza y core. Todo bajo impacto.",
+   "description": "Ejercicio en el agua dinámico, en piscina cubierta, donde hacemos trabajo cardiovascular, de fuerza y core. Todo bajo impacto.",
    "photo": "clases/aquafitness.webp",
    "photoAlt": "",
-   "placeholder": true
+   "placeholder": false
   },
   {
    "id": "pilates",
@@ -169,11 +169,11 @@
    "kind": "Fitness",
    "audience": "Adultos",
    "instructor": "Elena",
-   "summary": "Clase de pilates con Elena, los lunes y miércoles por la mañana.",
-   "description": "Clase de pilates con Elena, los lunes y miércoles por la mañana.",
+   "summary": "Clase de Pilates con Elena, enfocada en fortalecer el core y mejorar la postura, la flexibilidad y el equilibrio mediante ejercicios controlados y de bajo impacto. Adaptada a diferentes niveles.",
+   "description": "Clase de Pilates con Elena, enfocada en fortalecer el core y mejorar la postura, la flexibilidad y el equilibrio mediante ejercicios controlados y de bajo impacto. Adaptada a diferentes niveles.",
    "photo": "clases/pilates.webp",
    "photoAlt": "",
-   "placeholder": true
+   "placeholder": false
   }
  ],
  "sessions": [
