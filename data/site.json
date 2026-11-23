@@ -85,9 +85,13 @@
    "audience": "De 3 a 6 años",
    "summary": "Los más pequeños descubren el baile de forma divertida, desarrollando el ritmo, la coordinación, la creatividad y el trabajo en equipo.",
    "description": "Los más pequeños descubren el baile de forma divertida, desarrollando el ritmo, la coordinación, la creatividad y el trabajo en equipo.",
-   "photo": "clases/dance-baby.webp",
-   "photoAlt": "",
-   "placeholder": false
+   "photo": "grupo-baby.webp",
+   "photoAlt": "Alumnos del grupo baby bailando en el escenario de la Feria de Torrox",
+   "placeholder": false,
+   "photoSize": [
+    1179,
+    640
+   ]
   },
   {
    "id": "dance-intermedio",
@@ -98,9 +102,13 @@
    "audience": "A partir de 7 años",
    "summary": "Intermedio 1, Intermedio 2 e Intermedio 3, a partir de 7 años. Grupos de nivel intermedio para aprender a partir del nivel de cada uno y seguir progresando en técnica.",
    "description": "Intermedio 1, Intermedio 2 e Intermedio 3, a partir de 7 años. Grupos de nivel intermedio para aprender a partir del nivel de cada uno y seguir progresando en técnica.",
-   "photo": "clases/dance-intermedio.webp",
-   "photoAlt": "",
-   "placeholder": false
+   "photo": "grupos-intermedio.webp",
+   "photoAlt": "Alumnas de los grupos intermedios bailando en el escenario con ropa rosa y blanca",
+   "placeholder": false,
+   "photoSize": [
+    1179,
+    633
+   ]
   },
   {
    "id": "dance-avanzado",
