@@ -424,7 +424,15 @@
    "classes": [
     "dance-baby"
    ],
-   "photo": null
+   "photo": {
+    "src": "grupo-baby.webp",
+    "focus": [
+     0.45,
+     0.5
+    ],
+    "alt": "Alumnos del grupo baby bailando en el escenario de la Feria de Torrox",
+    "consent": "Foto facilitada por Nadia con autorización de las familias (23-11-2026)"
+   }
   },
   {
    "id": "niveles",
@@ -435,12 +443,13 @@
     "dance-avanzado"
    ],
    "photo": {
-    "src": "bailarina.webp",
+    "src": "grupos-intermedio.webp",
     "focus": [
-     0.5,
+     0.45,
      0.5
     ],
-    "alt": "Bailarina en plena coreografía"
+    "alt": "Alumnas de los grupos intermedios bailando en el escenario con ropa rosa y blanca",
+    "consent": "Foto facilitada por Nadia con autorización de las familias (23-11-2026)"
    }
   },
   {
