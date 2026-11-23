@@ -102,8 +102,13 @@ def img(p, photo, cls, sizes, eager=False, alt=None):
     return f'<img class="{cls}" src="{p}assets/img/{f}"{srcset} alt="{e(a)}" width="{photo["w"]}" height="{photo["h"]}"{loading}>'
 
 
+def generated_photo(c):
+    """Classes without a real photo get a drawn card in assets/img/clases/ (rebuilt every run, so names stay current)."""
+    return c["photo"].startswith("clases/")
+
+
 def class_photo(c):
-    if c["placeholder"]:
+    if generated_photo(c):
         return {"file": c["photo"], "alt": "", "w": 1200, "h": 750}
     return {"file": c["photo"], "alt": c["photoAlt"], "w": 840, "h": 840}
 
@@ -326,7 +331,7 @@ def today_board(p):
 
 def class_detail(p, c, n):
     when = "".join(f"<li>{w}</li>" for w in when_lines(c["id"]))
-    photo = img(p, class_photo(c), "cl-photo" + (" is-placeholder" if c["placeholder"] else ""), "(max-width: 860px) 100vw, 400px")
+    photo = img(p, class_photo(c), "cl-photo" + (" is-placeholder" if generated_photo(c) else ""), "(max-width: 860px) 100vw, 400px")
     return f'''<article class="cd" id="{c["id"]}">
 {photo}
 <div class="cd-main">
@@ -761,7 +766,7 @@ def images():
             im.resize((w, w), Image.LANCZOS).save(out.replace(".webp", f"-{w}.webp"), "WEBP", quality=84, method=6)
 
     for i, c in enumerate(CLASSES, 1):
-        if not c["placeholder"]:
+        if not generated_photo(c):
             continue
         im = Image.new("RGB", (1200, 750), paper)
         d = ImageDraw.Draw(im)
