@@ -451,12 +451,12 @@
     "wedance-adultos"
    ],
    "photo": {
-    "src": "clase-aire-libre-1.webp",
+    "src": "baile-adultos.webp",
     "focus": [
-     0.5,
+     0.4,
      0.5
     ],
-    "alt": "Monitoras dirigiendo una clase de baile al aire libre junto al mar"
+    "alt": "Alumnas adultas bailando en el escenario de la Feria de Torrox 2026"
    }
   },
   {
@@ -469,7 +469,14 @@
     "pilates",
     "fitdance"
    ],
-   "photo": null
+   "photo": {
+    "src": "fitness-bienestar.webp",
+    "focus": [
+     0.5,
+     0.55
+    ],
+    "alt": "Clase dirigida en la sala del estudio, con el rótulo de neón de Nadia al fondo"
+   }
   }
  ],
  "welcome": {
