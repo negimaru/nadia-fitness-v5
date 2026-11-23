@@ -132,9 +132,13 @@
    "audience": "Adultos",
    "summary": "Clase grupal para adultos donde se adquiere ritmo y musicalidad, se aprende a bailar y se pasa bien.",
    "description": "Clase grupal para adultos donde se adquiere ritmo y musicalidad, se aprende a bailar y se pasa bien.",
-   "photo": "bailarina.webp",
-   "photoAlt": "Bailarina en plena coreografía",
-   "placeholder": false
+   "photo": "baile-adultos.webp",
+   "photoAlt": "Alumnas adultas bailando en el escenario de la Feria de Torrox 2026",
+   "placeholder": false,
+   "photoSize": [
+    961,
+    497
+   ]
   },
   {
    "id": "fitdance",
