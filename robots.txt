@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://negimaru.github.io/nadia-fitness-v5/sitemap.xml
+Sitemap: https://nadiafitnessdance.es/sitemap.xml
