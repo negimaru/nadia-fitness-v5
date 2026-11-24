@@ -150,6 +150,11 @@ html:not(.js) .theme { display: none; }
 
 /* ---------- Hero: full-bleed photo, headline on a solid box (no gradient scrim, rule 1) ---------- */
 .hero { position: relative; }
+.hero-pause { position: absolute; top: 12px; right: 12px; z-index: 2; width: 36px; height: 36px; display: grid; place-items: center; padding: 0; border: 1px solid var(--band-rule); border-radius: 50%; background: var(--band); color: var(--band-ink); opacity: .75; cursor: pointer; }   /* WCAG 2.2.2: moving content must be pausable */
+.hero-pause:hover, .hero-pause:focus-visible { opacity: 1; }
+.hero-pause svg { width: 14px; height: 14px; fill: currentColor; }
+.hero-pause .ic-play, .hero-pause.is-paused .ic-pause { display: none; }
+.hero-pause.is-paused .ic-play { display: block; }
 .hero-img { width: 100%; height: clamp(360px, 33vw, 560px); object-fit: cover; object-position: 50% 40%; }
 .hero-in { position: relative; margin-top: -96px; }   /* the box overlaps the photo's foot, so no face is covered */
 .hero-box { max-width: 760px; background: var(--band); color: var(--band-ink); padding: 32px 36px 34px; border-left: 6px solid var(--band-pink); }
