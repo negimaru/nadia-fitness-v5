@@ -431,10 +431,10 @@
  },
  "photos": {
   "nadia": {
-   "file": "monitora-fitdance.webp",
-   "alt": "Nadia, monitora de Nadia Fitness Dance Studio, con micrófono antes de una clase",
-   "w": 840,
-   "h": 840
+   "file": "nadia-retrato.webp",
+   "alt": "Nadia González, con la sudadera rosa del estudio, delante de la pared negra con el logo de Nadia Fitness Dance Studio",
+   "w": 1080,
+   "h": 1350
   },
   "outdoor1": {
    "file": "clase-aire-libre-1.webp",
@@ -456,6 +456,13 @@
     "w": 1280,
     "h": 720
    }
+  },
+  "group": {
+   "file": "grupo-estudio.webp",
+   "alt": "Alumnas y alumnos de todas las edades con Nadia, celebrando juntos delante del cartel del estudio",
+   "w": 1600,
+   "h": 1200,
+   "consent": "Foto facilitada por Nadia con autorización de las familias (24-11-2026)"
   }
  },
  "groups": [
