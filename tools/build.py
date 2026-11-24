@@ -841,3 +841,7 @@ if __name__ == "__main__":
     write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n")
     write("site.webmanifest", manifest())
     write(".nojekyll", "")
+    host = SITE.split("/")[2]   # custom domain for GitHub Pages (none on *.github.io)
+    if not host.endswith("github.io"):
+        open(os.path.join(ROOT, "CNAME"), "w").write(host + "\n")
+        print("wrote CNAME")
