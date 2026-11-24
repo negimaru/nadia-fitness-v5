@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 11, "js": 1}                   # bump to bust browser caches
+V = {"css": 12, "js": 2}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -469,14 +469,15 @@ def nadia_block(p, eager=False, more=True):
 # ---------- pages ----------
 def page_home():
     p = ""
-    hero = D["photos"]["outdoor2"]
+    hv = D["photos"]["heroVideo"]   # looping slow-motion clip; the poster is what shows without JS or with reduced motion
     W = D["welcome"]   # Nadia's own home copy
     T = D["studioIntro"]   # "Descubre nuestro estudio", Nadia's text; the session count comes from the data
     return head(p, "", f'{S["name"]} · Baile y fitness en Torrox Costa',
                 "Centro de baile, fitness y bienestar en Torrox Costa (Málaga): grupos de dance por niveles para peques, jóvenes y adultos, Fitdance, PowerHIIT, Aquafitness y Pilates, de lunes a viernes.",
-                preload=(hero, "100vw")) + header(p, "") + f'''<main id="main">
+                preload=(hv["poster"], "100vw")) + header(p, "") + f'''<main id="main">
 <section class="hero" aria-labelledby="hero-title">
-{img(p, hero, "hero-img", "100vw", eager=True)}
+<video class="hero-img" id="hero-video" poster="{p}assets/video/{hv["name"]}.webp" muted loop playsinline preload="none" aria-hidden="true" width="1280" height="720"><source src="{p}assets/video/{hv["name"]}-m.mp4" type="video/mp4" media="(max-width: 860px)"><source src="{p}assets/video/{hv["name"]}.mp4" type="video/mp4"></video>
+<button type="button" class="hero-pause" id="hero-pause" hidden><span class="sr-only">Pausar el vídeo de fondo</span><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ic-pause" d="M7 5h3v14H7zM14 5h3v14h-3z"/><path class="ic-play" d="M8 5v14l11-7z"/></svg></button>
 <div class="wrap hero-in">
 <div class="hero-box">
 <h1 id="hero-title">{e(W["heroTitle"])} <em>{e(W["heroAccent"])}</em></h1>

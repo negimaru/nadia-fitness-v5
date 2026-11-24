@@ -119,9 +119,14 @@
    "audience": "Nivel avanzado",
    "summary": "Coreografías exigentes, con cierta dificultad, donde se requiere técnica y compromiso de asistencia.",
    "description": "Coreografías exigentes, con cierta dificultad, donde se requiere técnica y compromiso de asistencia.",
-   "photo": "clases/dance-avanzado.webp",
-   "photoAlt": "",
-   "placeholder": false
+   "photo": "clase-avanzado.webp",
+   "photoAlt": "Grupo avanzado actuando en el escenario de la Feria de Torrox 2026 con chaquetas de lentejuelas",
+   "placeholder": false,
+   "photoSize": [
+    1179,
+    651
+   ],
+   "photoConsent": "Foto facilitada por Nadia con autorización de las familias (24-11-2026)"
   },
   {
    "id": "wedance-adultos",
@@ -442,6 +447,15 @@
    "alt": "Tres monitoras de espaldas, en plena coreografía, dirigen una clase de baile al aire libre junto al mar",
    "w": 1600,
    "h": 478
+  },
+  "heroVideo": {
+   "name": "espejo-lento",
+   "poster": {
+    "file": "../video/espejo-lento.webp",
+    "alt": "",
+    "w": 1280,
+    "h": 720
+   }
   }
  },
  "groups": [

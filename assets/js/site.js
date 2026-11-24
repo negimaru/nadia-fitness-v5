@@ -184,6 +184,17 @@
       if (ref && ref.indexOf(location.origin) === 0 && ref !== location.href && history.length > 1) { e.preventDefault(); history.back(); }
     });
   });
+  // Hero video: only plays when motion is welcome; otherwise (and without JS) the poster photo stays.
+  var hv = document.getElementById('hero-video'), hp = document.getElementById('hero-pause');
+  if (hv && hp && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var label = hp.querySelector('.sr-only');
+    hv.preload = 'auto';
+    hv.play().then(function () { hp.hidden = false; }).catch(function () {});
+    hp.addEventListener('click', function () {
+      if (hv.paused) { hv.play(); hp.classList.remove('is-paused'); label.textContent = 'Pausar el vídeo de fondo'; }
+      else { hv.pause(); hp.classList.add('is-paused'); label.textContent = 'Reproducir el vídeo de fondo'; }
+    });
+  }
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
