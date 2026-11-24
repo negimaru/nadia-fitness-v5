@@ -29,7 +29,7 @@ SHORT = [d[:3] for d in DAYS]
 SLOTS = ["Mañana", "Mediodía", "Tarde", "Noche"]
 SITE = S["siteUrl"]                       # https://…/nadia-fitness-v5/
 SITE_PATH = "/" + SITE.split("/", 3)[3]   # /nadia-fitness-v5/
-V = {"css": 12, "js": 2}                   # bump to bust browser caches
+V = {"css": 13, "js": 2}                   # bump to bust browser caches
 BUILT = "2026-11-18"
 
 e = html.escape
@@ -626,7 +626,7 @@ def page_about():
 <div class="closing"><p>{e(C["lead"])}</p><p class="closing-title">{e(C["title"])} <em>{e(C["accent"])}</em>.</p></div>
 </div>
 </section>
-<figure class="photo-band">{img(p, D["photos"]["outdoor1"], "photo-band-img", "100vw")}</figure>
+<figure class="photo-band photo-band-group">{img(p, D["photos"]["group"], "photo-band-img", "100vw")}</figure>
 {phone_block(p)}
 </main>
 ''' + footer(p)

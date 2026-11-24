@@ -346,6 +346,7 @@ html:not(.js) .theme { display: none; }
 .cd-actions { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 20px; }
 
 .photo-band img { width: 100%; aspect-ratio: 16 / 5; object-fit: cover; object-position: 50% 40%; }
+.photo-band-group img { aspect-ratio: 16 / 8; object-position: 50% 62%; }   /* group photo: keep every head in */
 
 /* Contact */
 .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
@@ -475,6 +476,7 @@ html:not(.js) .theme { display: none; }
   .numbers-list b { font-size: 72px; }
   .cd-name { font-size: 34px; }
   .photo-band img { aspect-ratio: 16 / 7; }
+  .photo-band-group img { aspect-ratio: 4 / 3; }
   .js .filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 calc(var(--gutter) * -1) 16px; padding: 2px var(--gutter) 6px; scrollbar-width: none; }
   .filters::-webkit-scrollbar { display: none; }
   .filter { flex: none; }
