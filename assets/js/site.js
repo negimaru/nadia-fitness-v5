@@ -13,11 +13,9 @@
   // ---------- light / dark: follows the OS until chosen, then remembered ----------
   (function () {
     var KEY = 'nf5-theme', btn = document.querySelector('.theme');
-    var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
     function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
     function apply(t) { root.setAttribute('data-theme', t); if (btn) btn.setAttribute('aria-label', t === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); }
-    apply(stored() || (media && media.matches ? 'dark' : 'light'));
-    if (media && media.addEventListener) media.addEventListener('change', function (e) { if (!stored()) apply(e.matches ? 'dark' : 'light'); });
+    apply(stored() || 'dark');   // brand default; the device's light/dark setting is not followed
     if (btn) btn.addEventListener('click', function () {
       var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       try { localStorage.setItem(KEY, t); } catch (e) {}

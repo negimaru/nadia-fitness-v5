@@ -68,13 +68,12 @@
   --map-filter: grayscale(.2); --edge: transparent;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #17130F; --paper-alt: #201A15; --ink: #F3EEE6; --muted: #A89E93; --rule: #3A322C;
-    --pink: #FF5AA8; --pink-text: #FF5AA8; --on-pink: #17130F;
-    --map-filter: invert(.9) hue-rotate(180deg) saturate(.55) brightness(.95); --edge: #3A322C;
-    color-scheme: dark;
-  }
+/* Dark is the default (the brand's colours), whatever the device prefers; light only when chosen with the toggle */
+:root:not([data-theme="light"]) {
+  --paper: #17130F; --paper-alt: #201A15; --ink: #F3EEE6; --muted: #A89E93; --rule: #3A322C;
+  --pink: #FF5AA8; --pink-text: #FF5AA8; --on-pink: #17130F;
+  --map-filter: invert(.9) hue-rotate(180deg) saturate(.55) brightness(.95); --edge: #3A322C;
+  color-scheme: dark;
 }
 :root[data-theme="dark"] {
   --paper: #17130F; --paper-alt: #201A15; --ink: #F3EEE6; --muted: #A89E93; --rule: #3A322C;
