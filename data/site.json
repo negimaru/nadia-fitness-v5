@@ -149,9 +149,13 @@
    "audience": "Adultos",
    "summary": "Clase dirigida, dinámica y divertida que combina Comboxing, aeróbic, ejercicios de fuerza y tonificación y baile. Un entrenamiento completo para mejorar la resistencia, la coordinación y la condición física mientras disfrutas de la música.",
    "description": "Clase dirigida, dinámica y divertida que combina Comboxing, aeróbic, ejercicios de fuerza y tonificación y baile. Un entrenamiento completo para mejorar la resistencia, la coordinación y la condición física mientras disfrutas de la música.",
-   "photo": "monitora-fitdance.webp",
-   "photoAlt": "Nadia, monitora de Fitdance, con micrófono",
-   "placeholder": false
+   "photo": "clase-fitdance.webp",
+   "photoAlt": "Clase de Fitdance en la sala del estudio, con el grupo siguiendo la coreografía",
+   "placeholder": false,
+   "photoSize": [
+    1162,
+    656
+   ]
   },
   {
    "id": "powerhiit",
@@ -162,9 +166,13 @@
    "audience": "Adultos",
    "summary": "Entrenamiento dinámico donde se combinan ejercicios de cardio y fuerza para mejorar la condición física, tonificar y superar tus límites.",
    "description": "Entrenamiento dinámico donde se combinan ejercicios de cardio y fuerza para mejorar la condición física, tonificar y superar tus límites.",
-   "photo": "clases/powerhiit.webp",
-   "photoAlt": "",
-   "placeholder": false
+   "photo": "clase-powerhiit.webp",
+   "photoAlt": "Clase de entrenamiento funcional con mancuernas frente al espejo, con el neón de Nadia al fondo",
+   "placeholder": false,
+   "photoSize": [
+    1179,
+    587
+   ]
   },
   {
    "id": "aquafitness",
@@ -174,9 +182,13 @@
    "audience": "Adultos",
    "summary": "Ejercicio en el agua dinámico, en piscina cubierta, donde hacemos trabajo cardiovascular, de fuerza y core. Todo bajo impacto.",
    "description": "Ejercicio en el agua dinámico, en piscina cubierta, donde hacemos trabajo cardiovascular, de fuerza y core. Todo bajo impacto.",
-   "photo": "clases/aquafitness.webp",
-   "photoAlt": "",
-   "placeholder": false
+   "photo": "clase-aquafitness.webp",
+   "photoAlt": "Clase de Aquafitness en la piscina cubierta, con churros de colores",
+   "placeholder": false,
+   "photoSize": [
+    1179,
+    780
+   ]
   },
   {
    "id": "pilates",
@@ -187,9 +199,13 @@
    "instructor": "Elena",
    "summary": "Clase de Pilates con Elena, enfocada en fortalecer el core y mejorar la postura, la flexibilidad y el equilibrio mediante ejercicios controlados y de bajo impacto. Adaptada a diferentes niveles.",
    "description": "Clase de Pilates con Elena, enfocada en fortalecer el core y mejorar la postura, la flexibilidad y el equilibrio mediante ejercicios controlados y de bajo impacto. Adaptada a diferentes niveles.",
-   "photo": "clases/pilates.webp",
-   "photoAlt": "",
-   "placeholder": false
+   "photo": "clase-pilates.webp",
+   "photoAlt": "Clase de Pilates en la sala del estudio, con las alumnas en equilibrio sobre una pierna",
+   "placeholder": false,
+   "photoSize": [
+    1179,
+    768
+   ]
   }
  ],
  "sessions": [
