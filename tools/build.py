@@ -162,8 +162,6 @@ def head(p, path, title, desc, og="og-nadia-fitness.jpg", og_alt="Logotipo de Na
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
-<!-- Design proposal v5: remove this line when it replaces the live site -->
-<meta name="robots" content="noindex">
 {canon}<meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="{e(S["name"])}">
