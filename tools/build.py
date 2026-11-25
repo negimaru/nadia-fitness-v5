@@ -243,7 +243,7 @@ def footer(p):
 <div><h2 class="foot-title">Páginas</h2><ul class="foot-pages">{pages}</ul></div>
 </div>
 <div class="foot-legal"><div class="wrap foot-legal-in"><p>© <span id="year">2026</span> {e(S["name"])} · {e(S["locality"])}</p>
-<p><a href="{p}aviso-legal/">Aviso legal</a> · <a href="{p}privacidad/">Privacidad</a> · Propuesta de diseño v5</p></div></div>
+<p><a href="{p}aviso-legal/">Aviso legal</a> · <a href="{p}privacidad/">Privacidad</a></p></div></div>
 <nav class="callbar" aria-label="Contacto rápido"><a class="callbar-call" href="{TEL}">{I_PHONE}<span class="sr-only">Llamar al </span>{S["phone"]}</a>{ext(WHATSAPP, I_MSG + "WhatsApp", "callbar-wa")}</nav>
 </footer>
 <script type="application/json" id="nf-data">{client_data()}</script>
