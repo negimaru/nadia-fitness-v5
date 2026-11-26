@@ -22,6 +22,21 @@ python3 tools/build.py
 
 El script regenera todas las páginas, el sitemap, el manifest, la imagen para compartir el Horario, las imágenes de muestra de las clases y las 4 tarjetas de grupo (necesita Pillow). El HTML generado no se edita a mano.
 
+### Desde la hoja de Google de Nadia
+
+El horario, las horas de llamadas, los textos de las clases y los datos de contacto los edita Nadia en una hoja de Google. La Action `.github/workflows/sheets.yml` la lee cada hora, o cuando se lanza a mano:
+
+1. `tools/sheets.py sync` descarga los CSV de cada pestaña, los valida y los vuelca a `site.json`.
+2. Si algo ha cambiado, ejecuta `build.py` y hace commit.
+
+Con una sola fila mal no se escribe nada: la web se queda como estaba y la Action falla, con el motivo en el log.
+
+- **Plantilla** para importar en la hoja: `python3 tools/sheets.py template web-nadia.xlsx`. Se genera desde el `site.json` actual (necesita openpyxl).
+- **Enlaces:** `data/sheets.json` con `{"tabs": {"Clases": "…", "Horario": "…", "Llamadas": "…", "Estudio": "…"}}`. Cada valor es el enlace de *Archivo → Compartir → Publicar en la web → pestaña → CSV*. Sin ese archivo, la Action no hace nada.
+- **Probar sin Google:** `python3 tools/sheets.py sync --csv carpeta/`, con `Clases.csv`, `Horario.csv`, etc.
+
+Las clases nuevas o eliminadas no se hacen desde la hoja, porque necesitan foto y grupo. Se añaden aquí y después en la hoja de Nadia, en una fila con su `Código`. Mientras falte esa fila, la sincronización se para.
+
 **Fotos de las tarjetas:** en `groups` de `site.json`, pon en `photo` el archivo de `assets/img/` (`src`), el punto de encuadre (`focus`, de 0 a 1) y el `alt`. Con `photo: null` se genera una tarjeta oscura con el número. Peques y Fitness esperan fotos sin menores.
 
 ## Comprobado
